@@ -3,7 +3,7 @@ import WMT from './Wise_mystical_tree.jpg';
 import styled from "styled-components";
 import './App.css';
 import { clickTest } from "./ClickFunctionTest";
-//import Header from './Header.js';
+import Flasche from './Flaschenlogo.png';
 
 //Hello
 //Hello 2
@@ -27,9 +27,11 @@ function App() {
   return (
     <>
     <div className="App">
-    <header className="App-header2">
-        <a>It`s morbin time!</a>
-      </header>
+    <div className="title_bar">
+      <body>
+      <img src={Flasche} className="App-logo2"/>
+      </body>
+    </div>
       <header className="App-header">
         <img src={WMT} className="App-logo" alt="logo" />
         <p>
