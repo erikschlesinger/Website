@@ -2,14 +2,15 @@ import React, { useState } from "react";
 import WMT from './Wise_mystical_tree.jpg';
 import styled from "styled-components";
 import './App.css';
+import { clickTest } from "./ClickFunctionTest";
 
 //Hello
 
 const Button = styled.button`
-  background-color: #f44336;
+  background-color: blue;
   color: white;
-  font-size: 10px;
-  padding: 5px 10px;
+  font-size: 12px;
+  padding: 5px 20px;
   border-radius: 5px;
   margin: 10px 0px;
   cursor: pointer
@@ -29,7 +30,7 @@ function App() {
           <code>Geisteskrank</code>
         </p>
           <Button onClick={clickMe}>Klicke mich!</Button>
-          <button type="button" onClick={clickMe}> Test </button>
+          <button type="button" onClick={clickTest}> Test </button>
         <p>
           <code>Test-App { 5 + 5 }</code>
         </p>
