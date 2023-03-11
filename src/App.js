@@ -65,7 +65,7 @@ function App() {
 }
 
 function clickMe() {
-  alert("Der Shop zurzeit leider nicht verfügbar!");
+  alert("Der Shop ist zurzeit leider nicht verfügbar!");
 }
 
 export default App;
