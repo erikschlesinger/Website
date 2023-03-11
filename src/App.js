@@ -1,9 +1,12 @@
-import React, { useState } from "react";
-import WMT from './Wise_mystical_tree.jpg';
+import React from "react";
 import styled from "styled-components";
 import './App.css';
+import './Titlebar.css'
 import { clickTest } from "./ClickFunctionTest";
+//import WMT from './Wise_mystical_tree.jpg';
 import Flasche from './Flaschenlogo.png';
+import Logo from './CompanyLogo.png';
+import Logout from './logout.png'
 
 //Hello
 //Hello 2
@@ -27,20 +30,24 @@ function App() {
   return (
     <>
     <div className="App">
-    <div className="title_bar">
-      <body>
-      <img src={Flasche} className="App-logo2"/>
-      </body>
-    </div>
+      <div class="topnav">
+        <pic class="picture" href=" "><img src={Flasche} className="App-logo_fl" alt="logo-abbildung"/></pic>
+        <a class="active" href="#home">Home</a>
+        <a href="#news">Neuigkeiten</a>
+        <a href="#contact">Kontakt</a>
+        <a href="#about">Über uns</a>
+        <logout href="#logout">Logout</logout>
+      </div>
       <header className="App-header">
-        <img src={WMT} className="App-logo" alt="logo" />
+        <h2>Die smarte Trinkflasche von heute</h2>
+        <a href="/"><img src={Logo} className="App-logo" alt="logo der Flasche"/></a>
         <p>
-          <code>Geisteskrank</code>
+          <code>Jetzt vorbestellen!</code>
         </p>
-          <Button onClick={clickMe}>Klicke mich!</Button>
+          <Button onClick={clickMe}>Für 39,99€ bestellen</Button>
           <button type="button" onClick={clickTest}> Test </button>
         <p>
-          <code>Test-App { 5 + 5 }</code>
+          <code>Noch im Lager: { 10 + 5 } Stück</code>
         </p>
         <a
           className="App-link"
@@ -58,7 +65,7 @@ function App() {
 }
 
 function clickMe() {
-  alert("Es funktioniert!");
+  alert("Der Shop zurzeit leider nicht verfügbar!");
 }
 
 export default App;
