@@ -6,6 +6,7 @@ import { clickTest } from "./ClickFunctionTest";
 //import WMT from './Wise_mystical_tree.jpg';
 import Flasche from './Flaschenlogo.png';
 import Logo from './CompanyLogo.png';
+import Banner from './_Banner_Neu.png'
 import Logout from './logout.png'
 
 //Hello
@@ -38,17 +39,19 @@ function App() {
         <a href="#about">Über uns</a>
         <logout href="#logout">Logout</logout>
       </div>
-      <header className="App-header">
-        <h2>Die smarte Trinkflasche von heute</h2>
-        <a href="/"><img src={Logo} className="App-logo" alt="logo der Flasche"/></a>
-        <p>
-          <code>Jetzt vorbestellen!</code>
-        </p>
-          <Button onClick={clickMe}>Für 39,99€ bestellen</Button>
-          <button type="button" onClick={clickTest}> Test </button>
-        <p>
-          <code>Noch im Lager: { 10 + 5 } Stück</code>
-        </p>
+
+        <a href="/"><img src={Banner} className="App-banner" alt="logo der Flasche"/></a>
+        <header>  
+          <a href="/"><img src={Logo} className="App-logo" alt="Abbildung der Flasche"/></a>
+          <p>
+            <code>Jetzt vorbestellen!</code>
+          </p>
+            <Button onClick={clickMe}>Für 39,99€ bestellen</Button>
+            <button type="button" onClick={clickTest}> Test </button>
+          <p>
+            <code>Noch im Lager: { 10 + 5 } Stück</code>
+          </p>
+          </header>
         <a
           className="App-link"
           href="https://www.kfw.de/Bilder/Karriere/Bilder-2021/Ausbildung-Duales-Studium/Ramzan-Dadiev_696x392.jpg"
@@ -57,7 +60,6 @@ function App() {
         >
           Das wird die 1,0 Jungs
         </a> 
-      </header>
     </div>
 
     </>

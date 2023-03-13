@@ -11,6 +11,14 @@
   outline-offset: 0; 
 }
 
+.App-banner {
+  height: flex;
+  width: 100%;
+  display: flex;
+  pointer-events: none;
+  padding: 0px 0px 10px 0px;
+}
+
 .App-logo_fl {
   height: 25px;
   width: 200px;
