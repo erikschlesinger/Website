@@ -1,14 +1,14 @@
 import React, {Component, useState} from "react";
+import {Link} from "react-router-dom";
 import { ReactDOM } from "react";
 import styled from "styled-components";
 import './App.css';
 import './Titlebar.css';
 import { clickTest } from "./ClickFunctionTest";
-//import WMT from './Wise_mystical_tree.jpg';
-import Flasche from './Flaschenlogo.png';
-import Logo from './CompanyLogo.png';
-import Banner from './_Banner_Neu.png'
-//import Logout from './logout.png'
+import Flasche from './images/general/Logo_Schriftzug.png';
+import Logo from './images/general/CompanyLogo.png';
+import Banner from './images/general/Banner.png'
+import Logout from './images/general/logout.png'
 
 
 class App extends React.Component {
@@ -30,12 +30,12 @@ class App extends React.Component {
       return(
       <div className="App">
       <div class="topnav">
-        <pic class="picture" href=" "><img src={Flasche} className="App-logo_fl" alt="logo-abbildung"/></pic>
-        <a class="active" href="#home">Home</a>
+        <a class="picture" href="#home"><img src={Flasche} className="App-logo_fl" alt="logo-abbildung"/></a>
         <a href="#news">Neuigkeiten</a>
         <a href="#contact">Kontakt</a>
         <a href="#about">Über uns</a>
-        <logout href="#logout">Logout</logout>
+        <a href="#shop">Kaufe jetzt deine Flasche!</a>
+        <logout class="picture" href="#loginlogout"><img src={Logout} className="Logout" alt="logo-abbildung"/></logout>
       </div>
 
         <a href="/"><img src={Banner} className="App-banner" alt="logo der Flasche"/></a>
