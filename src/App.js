@@ -1,17 +1,14 @@
-import React from "react";
+import React, {Component, useState} from "react";
+import { ReactDOM } from "react";
 import styled from "styled-components";
 import './App.css';
-import './Titlebar.css'
+import './Titlebar.css';
 import { clickTest } from "./ClickFunctionTest";
-//import WMT from './Wise_mystical_tree.jpg';
+import WMT from './Wise_mystical_tree.jpg';
 import Flasche from './Flaschenlogo.png';
 import Logo from './CompanyLogo.png';
 import Banner from './_Banner_Neu.png'
 import Logout from './logout.png'
-
-//Hello
-//Hello 2
-
 
 const Button = styled.button`
   background-color: blue;
@@ -25,12 +22,13 @@ const Button = styled.button`
   box-shadow: 0px 2px 2px lightgray;
 `;
 
+var value = 25;
 
+class App extends React.Component {
 
-function App() {
-  return (
-    <>
-    <div className="App">
+    render(){
+      return(
+      <div className="App">
       <div class="topnav">
         <pic class="picture" href=" "><img src={Flasche} className="App-logo_fl" alt="logo-abbildung"/></pic>
         <a class="active" href="#home">Home</a>
@@ -49,7 +47,7 @@ function App() {
             <Button onClick={clickMe}>Für 39,99€ bestellen</Button>
             <button type="button" onClick={clickTest}> Test </button>
           <p>
-            <code>Noch im Lager: { 10 + 5 } Stück</code>
+            <code>Noch im Lager: {value} Stück</code>
           </p>
           </header>
         <a
@@ -61,13 +59,18 @@ function App() {
           Das wird die 1,0 Jungs
         </a> 
     </div>
-
-    </>
-  );
-}
+      );
+    }
+  }
 
 function clickMe() {
   alert("Der Shop ist zurzeit leider nicht verfügbar!");
+  alert(value);
+  value -= 1;
+  alert(value);
+  //root.render(value)
+  return value
 }
+
 
 export default App;
