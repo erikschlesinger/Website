@@ -12,7 +12,7 @@ import Logout from './images/general/logout.png'
 
 
 
-class App extends React.Component {
+class Contact extends React.Component {
 
   constructor() {
     super();
@@ -45,15 +45,6 @@ class App extends React.Component {
 
         <a href="/"><img src={Banner} className="App-banner" alt="logo der Flasche"/></a>
         <header>  
-          <a href="/"><img src={Logo} className="App-logo" alt="Abbildung der Flasche"/></a>
-          <p>
-            <code>Jetzt vorbestellen!</code>
-          </p>
-            <Button onClick={this.clickMe}>Für 39,99€ bestellen</Button>
-            <button type="button" onClick={clickTest}> Test </button>
-          <p>
-            <code>Noch im Lager: {value} Stück</code>
-          </p>
           </header>
         <a
           className="App-link"
@@ -85,4 +76,4 @@ const Button = styled.button`
 var value = 5;
 
 
-export default App;
+export default Contact;

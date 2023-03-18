@@ -1,22 +1,23 @@
 .App {
   text-align: center;
+  cursor: url(cursor_32_x_32_Neu.png) 10 0, none;
 }
 
 .App-logo {
   height: 40vmin;
-  pointer-events: none;
   outline: #ddd;
   outline-width: medium; 
   outline-style: ridge;
   outline-offset: 0; 
+  cursor: url(Pointer_32_x_32.png) 10 0, pointer;
 }
 
 .App-banner {
   height: flex;
   width: 100%;
   display: flex;
-  pointer-events: none;
   padding: 0px 0px 25px 0px;
+  cursor: url(Pointer_32_x_32.png) 10 0, pointer;
 }
 
 .App-logo_fl {

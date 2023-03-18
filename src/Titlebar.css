@@ -17,6 +17,7 @@
     padding: 16px 16px;
     text-decoration: none;
     font-size: 17px;
+    cursor: url(Pointer_32_x_32.png) 10 0, pointer;
   }
 
   /*Damit wir keine Probleme mit Anzeigefehlern haben machen wir das gleiche für das HTML Attribut <pic> was für Bilder verwendet wird!*/
@@ -37,6 +38,7 @@
     padding: 16px 16px;
     text-decoration: none;
     font-size: 17px;
+    cursor: url(Pointer_32_x_32.png) 10 0, pointer;
   }
 
   /*Hier werden alle Attribute von topnav a an die Eigenschaft "hover" vererbt*/
