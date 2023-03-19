@@ -44,30 +44,37 @@ class Contact extends React.Component {
 Danach können dann einzelne Elemente angepasst werden indem sie das "Form" Tag nutzen*/}
   
   <Form>
-  <Form.Group className="mb-3">
-        <Form.Label>Disabled select menu</Form.Label>
+  <Form.Group className="mx-5 mb-3">
+        <Form.Label><b>Wozu hast du eine Frage?</b></Form.Label>
+        <p><Form.Text className="text-muted">
+          Die Einordnung deiner Frage hilft uns dabei schneller auf dein Anliegen reagieren zu können! :^)
+        </Form.Text></p>
         <Form.Select>
-          <option>Disabled select</option>
+          <option>Fragen zum Produkt</option>
+          <option>Fragen zum Unternehmen</option>
+          <option>Produktbeschwerden</option>
+          <option>Rücksendungen</option>
+          <option>Versandprobleme</option>
+          <option>Erstattungen</option>
+          <option>Sonstiges</option>
         </Form.Select>
+
       </Form.Group>
-      <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>Email address</Form.Label>
-        <Form.Control type="email" placeholder="Enter email" />
+      <Form.Group className="mx-5 mb-3" controlId="formBasicEmail">
+        <b><Form.Label>Email Addresse</Form.Label></b>
+        <Form.Control type="email" placeholder="Gib bitte deine E-Mail Adresse an." />
         <Form.Text className="text-muted">
-          We'll never share your email with anyone else.
+          Keine Sorge. Wir geben deine E-Mail an niemanden weiter!
         </Form.Text>
       </Form.Group>
 
-      <Form.Group className="mb-3" controlId="formBasicPassword">
-        <Form.Label>Password</Form.Label>
-        <Form.Control type="password" placeholder="Password" />
+      <Form.Group className="mx-5 mb-3" controlId="exampleForm.ControlTextarea1">
+        <b><Form.Label>Deine Nachricht</Form.Label></b>
+        <Form.Control as="textarea" rows={3} />
       </Form.Group>
-      <Form.Group className="mb-3" controlId="formBasicCheckbox">
-        <Form.Check type="checkbox" label="Check me out" />
-      </Form.Group>
-      <Button variant="primary" type="submit">
-        Submit
-      </Button>
+      <Submit variant="primary" type="submit">
+        Abschicken
+      </Submit>
     </Form>
   </div>
     )
@@ -94,5 +101,16 @@ const Button = styled.button`
 //Falls ihr den State für Value ändern wollt ändert das hier
 var value = 5;
 
+const Submit = styled.button`
+  background-color: rgb(79, 166, 71);
+  color: white;
+  font-size: 12px;
+  padding: 5px 20px;
+  border-radius: 5px;
+  margin: 10px 5px;
+  outline: 0;
+  box-shadow: 2px 2px 0px lightgray;
+  cursor: url(Pointer_32_x_32.png) 10 0, pointer;
+`;
 
 export default Contact;
