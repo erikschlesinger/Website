@@ -5,24 +5,14 @@ import styled from "styled-components";
 import './App.css';
 import './Titlebar.css';
 import Titlebar_Component from './Titlebar.js';
-import { clickTest } from "./ClickFunctionTest";
-import Flasche from './images/general/Logo_Schriftzug.png';
-import Logo from './images/general/CompanyLogo.png';
-import Banner from './images/general/Banner.png';
-import Logout from './images/general/logout.png';
-import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import Titlebar from "./Titlebar.js";
+import './Contact.css';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
 
 class Contact extends React.Component {
-
-  constructor() {
-    super();
-    this.state ={
-      value: {value}
-    };
-  }
 
   clickSubmit = () => {
     alert("Vielen Dank deine Anfrage! Du wirst in Kürze von uns hören");
@@ -35,10 +25,14 @@ class Contact extends React.Component {
 
 {/*Unterhalb wird das Kontaktformular mithilfe der Bootstrapping Modules ausgeführt. Dieses wird in React benötigt (npm i bootstrap)
 Danach können dann einzelne Elemente angepasst werden indem sie das "Form" Tag nutzen*/}
-  
-  <Form>
-  <Form.Group className="mx-5 mb-3">
-        <Form.Label><b>Wozu hast du eine Frage?</b></Form.Label>
+
+  <Container>
+    <Row>
+      <Col></Col>
+    <Col xs={6}><Form>
+   <div className="Auth-form">
+  <Form.Group className="mx-2 mb-3">
+        <Form.Label className="mt-2"><b>Wozu hast du eine Frage?</b></Form.Label>
         <p><Form.Text className="text-muted">
           Die Einordnung deiner Frage hilft uns dabei schneller auf dein Anliegen reagieren zu können! :^)
         </Form.Text></p>
@@ -53,8 +47,9 @@ Danach können dann einzelne Elemente angepasst werden indem sie das "Form" Tag 
           <option>Sonstiges</option>
         </Form.Select>
 
+
       </Form.Group>
-      <Form.Group className="mx-5 mb-3" controlId="formBasicEmail">
+      <Form.Group className="mx-2 mb-3" controlId="formBasicEmail">
         <b><Form.Label>Email Addresse</Form.Label></b>
         <Form.Control type="email" placeholder="Gib bitte deine E-Mail Adresse an." />
         <Form.Text className="text-muted">
@@ -62,41 +57,26 @@ Danach können dann einzelne Elemente angepasst werden indem sie das "Form" Tag 
         </Form.Text>
       </Form.Group>
 
-      <Form.Group className="mx-5 mb-3" controlId="exampleForm.ControlTextarea1">
+      <Form.Group className="mx-2 mb-3" controlId="exampleForm.ControlTextarea1">
         <b><Form.Label>Deine Nachricht</Form.Label></b>
         <Form.Control as="textarea" rows={3} />
       </Form.Group>
       <Submit onClick={this.clickSubmit}>Abschicken</Submit>
-    </Form>
+      </div>
+      </Form>
+      </Col>
+    <Col></Col>
+    </Row>
+    </Container>
+
   </>
     )
   }
 };
 
-
-
-
-
-
-/*
-const Button = styled.button`
-  background-color: rgb(79, 166, 71);
-  color: white;
-  font-size: 12px;
-  padding: 5px 20px;
-  border-radius: 5px;
-  margin: 10px 5px;
-  outline: 0;
-  box-shadow: 2px 2px 0px lightgray;
-  cursor: url(Pointer_32_x_32.png) 10 0, pointer;
-`;
-*/
-
-//Falls ihr den State für Value ändern wollt ändert das hier
-var value = 5;
-
 const Submit = styled.button`
   background-color: rgb(79, 166, 71);
+  float: center;
   color: white;
   font-size: 12px;
   padding: 5px 20px;
