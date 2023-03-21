@@ -22,8 +22,8 @@ class Impressum extends React.Component {
                 <a><dfn>Am Flaschenplatz 3a</dfn><br /></a>
                 <a><dfn>10247 Berlin</dfn><br /></a>
                 <a><br /></a>
-                <a>Telefon: <dfn>+(49) 30 500-01</dfn><br /></a>
-                <a>Fax:<dfn> +(49) 30 500-02</dfn><br /></a>
+                <a>Telefon: <dfn>+(49) 30 50081-01</dfn><br /></a>
+                <a>Fax:<dfn> +(49) 30 50081-02</dfn><br /></a>
                 <a>E-Mail:<dfn> info@flaschen-ag.de</dfn><br /></a>
                 <a>Internet:&nbsp;</a>
                 <a
@@ -34,8 +34,8 @@ class Impressum extends React.Component {
                     color="#07a837"
                 ><dfn>www.flaschen-ag.de</dfn><br /></a>
                 <a><br /></a>
-                <a>Geschäftsführung: <dfn>Erik Schlesinger</dfn><br /></a>
-                <a>Gesellschaftler: <dfn>ppa. Dominik Lau, ppa. Ramzan Dadiev, i.V. Celina Bott</dfn><br /></a>
+                <a>Geschäftsführung: <dfn>Erik Schlesinger (CEO)</dfn><br /></a>
+                <a>Gesellschaftler: <dfn>ppa. Dominik Lau (CSO), ppa. Ramzan Dadiev (CTO), i.V. Celina Bott (CPO)</dfn><br /></a>
                 <a>Handelsregister: <dfn>Amtsgericht Berlin, Abteilung B, Nr. 8236</dfn><br /></a>
                 <a><br /></a>
                 <a>Umsatzsteuer-ID-Nr.:<dfn> DE 119631149</dfn></a>
