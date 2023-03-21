@@ -7,8 +7,13 @@ import './Titlebar.css';
 import { clickTest } from "./ClickFunctionTest";
 import Flasche from './images/general/Logo_Schriftzug.png';
 import Logo from './images/general/CompanyLogo.png';
-import Banner from './images/general/Banner.png'
-import Logout from './images/general/logout.png'
+import Banner from './images/general/Banner.png';
+import Logout from './images/general/logout.png';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
+
 
 
 
@@ -19,16 +24,6 @@ class Contact extends React.Component {
     this.state ={
       value: {value}
     };
-  }
-
-  clickMe = () => {
-    if (value >= 1) {
-      alert("Die Bestellung wurde dem Warenkorb hinzugefügt!");
-      this.setState({value: value -= 1});
-    }
-    else {
-      alert("Wir haben leider keine Produkte mehr auf Lager tut uns leid! :(")
-      }
   }
 
     render(){
@@ -44,22 +39,52 @@ class Contact extends React.Component {
       </div>
 
         <a href="/"><img src={Banner} className="App-banner" alt="logo der Flasche"/></a>
-        <header>  
-          </header>
-        <a
-          className="App-link"
-          href="https://www.kfw.de/Bilder/Karriere/Bilder-2021/Ausbildung-Duales-Studium/Ramzan-Dadiev_696x392.jpg"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Test Test
-        </a> 
-    </div>
-      );
-    }
+
+{/*Unterhalb wird das Kontaktformular mithilfe der Bootstrapping Modules ausgeführt. Dieses wird in React benötigt (npm i bootstrap)
+Danach können dann einzelne Elemente angepasst werden indem sie das "Form" Tag nutzen*/}
+  
+  <Form>
+  <Form.Group className="mx-5 mb-3">
+        <Form.Label><b>Wozu hast du eine Frage?</b></Form.Label>
+        <p><Form.Text className="text-muted">
+          Die Einordnung deiner Frage hilft uns dabei schneller auf dein Anliegen reagieren zu können! :^)
+        </Form.Text></p>
+        <Form.Select>
+          <option>Fragen zum Produkt</option>
+          <option>Fragen zum Unternehmen</option>
+          <option>Produktbeschwerden</option>
+          <option>Rücksendungen</option>
+          <option>Versandprobleme</option>
+          <option>Erstattungen</option>
+          <option>Sonstiges</option>
+        </Form.Select>
+
+      </Form.Group>
+      <Form.Group className="mx-5 mb-3" controlId="formBasicEmail">
+        <b><Form.Label>Email Addresse</Form.Label></b>
+        <Form.Control type="email" placeholder="Gib bitte deine E-Mail Adresse an." />
+        <Form.Text className="text-muted">
+          Keine Sorge. Wir geben deine E-Mail an niemanden weiter!
+        </Form.Text>
+      </Form.Group>
+
+      <Form.Group className="mx-5 mb-3" controlId="exampleForm.ControlTextarea1">
+        <b><Form.Label>Deine Nachricht</Form.Label></b>
+        <Form.Control as="textarea" rows={3} />
+      </Form.Group>
+      <Submit variant="primary" type="submit">
+        Abschicken
+      </Submit>
+    </Form>
+  </div>
+    )
   }
+};
 
 
+
+
+/*
 const Button = styled.button`
   background-color: rgb(79, 166, 71);
   color: white;
@@ -71,9 +96,21 @@ const Button = styled.button`
   box-shadow: 2px 2px 0px lightgray;
   cursor: url(Pointer_32_x_32.png) 10 0, pointer;
 `;
+*/
 
 //Falls ihr den State für Value ändern wollt ändert das hier
 var value = 5;
 
+const Submit = styled.button`
+  background-color: rgb(79, 166, 71);
+  color: white;
+  font-size: 12px;
+  padding: 5px 20px;
+  border-radius: 5px;
+  margin: 10px 5px;
+  outline: 0;
+  box-shadow: 2px 2px 0px lightgray;
+  cursor: url(Pointer_32_x_32.png) 10 0, pointer;
+`;
 
 export default Contact;
