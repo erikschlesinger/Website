@@ -12,7 +12,7 @@ class Fusszeile extends React.Component {
   <a href="#home" class="active">Home</a>
   <a href="#news">News</a>
   <a href="#contact">Contact</a>
-  <a href="#impressum">Impressum</a>
+  <a href="Impressum">Impressum</a>
   </div>
 )
 }
