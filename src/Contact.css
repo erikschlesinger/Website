@@ -3,8 +3,8 @@
   }
 
   
-  .Auth-form {
-    width: 650px;
+  .request-form {
+    width: 665px;
     display: block;
     justify-content: center;
     box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
@@ -13,3 +13,14 @@
     border-radius: 8px;
     background-color: white;
   }
+
+  #submitButton {
+    text-align: center;
+  }
+
+  #labelTitel {
+    display: block;
+    text-align: center;
+    line-height: 150%;
+    font-size: 2em;
+}

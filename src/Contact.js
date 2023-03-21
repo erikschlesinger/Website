@@ -30,9 +30,9 @@ Danach können dann einzelne Elemente angepasst werden indem sie das "Form" Tag 
     <Row>
       <Col></Col>
     <Col xs={6}><Form>
-   <div className="Auth-form">
+   <div className="request-form">
   <Form.Group className="mx-2 mb-3">
-        <Form.Label className="mt-2"><b>Wozu hast du eine Frage?</b></Form.Label>
+        <Form.Label className="mt-2" id="labelTitel"><b>Wozu hast du eine Frage?</b></Form.Label>
         <p><Form.Text className="text-muted">
           Die Einordnung deiner Frage hilft uns dabei schneller auf dein Anliegen reagieren zu können! :^)
         </Form.Text></p>
@@ -61,7 +61,9 @@ Danach können dann einzelne Elemente angepasst werden indem sie das "Form" Tag 
         <b><Form.Label>Deine Nachricht</Form.Label></b>
         <Form.Control as="textarea" rows={3} />
       </Form.Group>
+      <div id="submitButton">
       <Submit onClick={this.clickSubmit}>Abschicken</Submit>
+      </div>
       </div>
       </Form>
       </Col>
