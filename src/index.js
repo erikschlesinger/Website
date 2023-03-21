@@ -1,4 +1,4 @@
-import Login from './login'
+import Login from './Login'
 import App from './App'
 import Contact from './Contact'
 import React from 'react';
