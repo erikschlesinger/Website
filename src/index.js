@@ -1,9 +1,8 @@
-import { BrowserRouter } from 'react-router-dom';
+import Login from './Login'
+import App from './App'
+import Contact from './Contact'
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import Contact from './Contact';
 import reportWebVitals from './reportWebVitals';
 import {
   createBrowserRouter,
@@ -13,6 +12,10 @@ import {
 const router = createBrowserRouter([
   {
     path: "/",
+    element: <Login />
+  },
+  {
+    path: "/App",
     element: <App />
   },
   {
