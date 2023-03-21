@@ -12,7 +12,7 @@ import {
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Login />
+    element: <App />
   },
   {
     path: "/App",
@@ -21,6 +21,10 @@ const router = createBrowserRouter([
   {
     path: "/Contact",
     element: <Contact />
+  },
+  {
+    path: "/Login",
+    element: <Login />
   }
 ]);
 

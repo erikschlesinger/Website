@@ -2,8 +2,8 @@ import React, {Component, useState} from "react";
 import {Link} from "react-router-dom";
 import { ReactDOM } from "react";
 import styled from "styled-components";
-//import './App.css';
-import './Titlebar.css';
+import Titlebar_Component from './Titlebar.js';
+import Fusszeile_Component from './Fusszeile.js';
 import { clickTest } from "./ClickFunctionTest";
 import Flasche from './images/general/Logo_Schriftzug.png';
 import Logo from './images/general/CompanyLogo.png';
@@ -35,17 +35,9 @@ class App extends React.Component {
 
     render(){
       return(
+        <>
+        <Titlebar_Component></Titlebar_Component>
       <div className="App">
-      <div class="topnav">
-        <pic class="picture" href="#home"><img src={Flasche} className="App-logo_fl" alt="logo-abbildung"/></pic>
-        <a href="#news">Neuigkeiten</a>
-        <a href="Contact">Kontakt</a>
-        <a href="#about">Über uns</a>
-        <a href="#shop">Kaufe jetzt deine Flasche!</a>
-        <logout href="#loginlogout"><img src={Logout} className="Logout" alt="logo-abbildung"/></logout>
-      </div>
-
-        <a href="/"><img src={Banner} className="App-banner" alt="logo der Flasche"/></a>
         <header>  
           <a href="/"><img src={Logo} className="App-logo" alt="Abbildung der Flasche"/></a>
           <p>
@@ -64,8 +56,11 @@ class App extends React.Component {
           rel="noopener noreferrer"
         >
           Test Test
-        </a> 
+        </a>
+        <Fusszeile_Component></Fusszeile_Component>
     </div>
+ 
+  </>   
       );
     }
   }

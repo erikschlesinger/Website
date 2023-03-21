@@ -4,6 +4,7 @@ import { ReactDOM } from "react";
 import styled from "styled-components";
 import './App.css';
 import './Titlebar.css';
+import Titlebar_Component from './Titlebar.js';
 import { clickTest } from "./ClickFunctionTest";
 import Flasche from './images/general/Logo_Schriftzug.png';
 import Logo from './images/general/CompanyLogo.png';
@@ -12,6 +13,7 @@ import Logout from './images/general/logout.png';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import Titlebar from "./Titlebar.js";
 
 
 
@@ -28,17 +30,8 @@ class Contact extends React.Component {
 
     render(){
       return(
-      <div className="App">
-      <div class="topnav">
-        <pic class="picture" href="#home"><img src={Flasche} className="App-logo_fl" alt="logo-abbildung"/></pic>
-        <a href="#news">Neuigkeiten</a>
-        <a href="Contact">Kontakt</a>
-        <a href="#about">Über uns</a>
-        <a href="#shop">Kaufe jetzt deine Flasche!</a>
-        <logout href="#loginlogout"><img src={Logout} className="Logout" alt="logo-abbildung"/></logout>
-      </div>
-
-        <a href="/"><img src={Banner} className="App-banner" alt="logo der Flasche"/></a>
+        <>
+      <Titlebar_Component></Titlebar_Component>
 
 {/*Unterhalb wird das Kontaktformular mithilfe der Bootstrapping Modules ausgeführt. Dieses wird in React benötigt (npm i bootstrap)
 Danach können dann einzelne Elemente angepasst werden indem sie das "Form" Tag nutzen*/}
@@ -76,7 +69,7 @@ Danach können dann einzelne Elemente angepasst werden indem sie das "Form" Tag 
         Abschicken
       </Submit>
     </Form>
-  </div>
+  </>
     )
   }
 };
