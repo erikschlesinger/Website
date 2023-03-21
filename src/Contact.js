@@ -15,10 +15,6 @@ import Form from 'react-bootstrap/Form';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import Titlebar from "./Titlebar.js";
 
-
-
-
-
 class Contact extends React.Component {
 
   constructor() {
@@ -26,6 +22,10 @@ class Contact extends React.Component {
     this.state ={
       value: {value}
     };
+  }
+
+  clickSubmit = () => {
+    alert("Vielen Dank deine Anfrage! Du wirst in Kürze von uns hören");
   }
 
     render(){
@@ -49,6 +49,7 @@ Danach können dann einzelne Elemente angepasst werden indem sie das "Form" Tag 
           <option>Rücksendungen</option>
           <option>Versandprobleme</option>
           <option>Erstattungen</option>
+          <option>Kooperation</option>
           <option>Sonstiges</option>
         </Form.Select>
 
@@ -65,14 +66,14 @@ Danach können dann einzelne Elemente angepasst werden indem sie das "Form" Tag 
         <b><Form.Label>Deine Nachricht</Form.Label></b>
         <Form.Control as="textarea" rows={3} />
       </Form.Group>
-      <Submit variant="primary" type="submit">
-        Abschicken
-      </Submit>
+      <Submit onClick={this.clickSubmit}>Abschicken</Submit>
     </Form>
   </>
     )
   }
 };
+
+
 
 
 
