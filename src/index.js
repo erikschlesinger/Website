@@ -1,6 +1,7 @@
-import Login from './login'
+import Login from './Login'
 import App from './App'
 import Contact from './Contact'
+import Impressum from './impressum';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
   {
     path: "/Login",
     element: <Login />
+  },
+  {
+    path: "/Impressum",
+    element: <Impressum />
   }
 ]);
 
