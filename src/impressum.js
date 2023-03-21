@@ -43,11 +43,8 @@ class Impressum extends React.Component {
                 <a><br /></a>
                 <a><br /></a>
                 <a><br /></a>
-                <a><br /></a>
-                <a><br /></a>
-                <a><br /></a>
-                <a><br /></a>
             </ul>
+        <Fusszeile_Component></Fusszeile_Component>
         </>   
       );
     }
