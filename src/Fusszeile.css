@@ -1,6 +1,7 @@
 /* Place the navbar at the bottom of the page, and make it stick */
 .navbar {
   background-color: rgb(65, 144, 65);
+  text-align: center;
   overflow: hidden;
   position: relative;
   bottom: 0;

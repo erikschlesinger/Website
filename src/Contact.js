@@ -5,6 +5,7 @@ import styled from "styled-components";
 import './App.css';
 import './Titlebar.css';
 import Titlebar_Component from './Titlebar.js';
+import Fusszeile_Component from './Fusszeile.js';
 import Form from 'react-bootstrap/Form';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './Contact.css';
@@ -70,7 +71,7 @@ Danach können dann einzelne Elemente angepasst werden indem sie das "Form" Tag 
     <Col></Col>
     </Row>
     </Container>
-
+    <Fusszeile_Component></Fusszeile_Component>
   </>
     )
   }

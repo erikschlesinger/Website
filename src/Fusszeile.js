@@ -9,7 +9,7 @@ class Fusszeile extends React.Component {
         return(
         <div class="navbar">
           
-          <a href="#home" class="active">Home</a>
+          <a href="App">Home</a>
           <a href="AGBs">AGBs</a>
           <a href="Contact">Contact</a>
 
