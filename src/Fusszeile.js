@@ -10,7 +10,7 @@ class Fusszeile extends React.Component {
         <div class="navbar">
           
           <a href="#home" class="active">Home</a>
-          <a href="#news">News</a>
+          <a href="AGBs">AGBs</a>
           <a href="Contact">Contact</a>
 
           <a href="Impressum">Impressum</a>

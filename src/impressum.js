@@ -27,7 +27,7 @@ class Impressum extends React.Component {
                 <a>E-Mail:<dfn> info@flaschen-ag.de</dfn><br /></a>
                 <a>Internet:&nbsp;</a>
                 <a
-                    className="App-link"
+                    className="Impressum-link"
                     href="http://localhost:3000/"
                     target="_self"
                     rel="noopener noreferrer"

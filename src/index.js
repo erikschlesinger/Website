@@ -2,6 +2,7 @@ import Login from './Login'
 import App from './App'
 import Contact from './Contact'
 import Impressum from './impressum';
+import AGBs from './AGBs';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
   {
     path: "/Impressum",
     element: <Impressum />
+  },
+  {
+    path: "/AGBs",
+    element: <AGBs />
   }
 ]);
 
