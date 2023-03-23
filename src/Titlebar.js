@@ -18,7 +18,7 @@ class Titlebar extends React.Component {
   <a href="/">Startseite</a>
   <a href="#news">Neuigkeiten</a>
   <a href="Contact">Kontakt</a>
-  <a href="#about">Über uns</a>
+  <a href="About">Über uns</a>
   <a href="#shop">Kaufe jetzt deine Flasche!</a>
  <a href="Login"><img src={Logout} className="Logout" alt="logo-abbildung"/></a>
 </div>

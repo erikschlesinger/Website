@@ -1,7 +1,7 @@
 import React, {Component, useState} from "react";
-import Titlebar_Component from './Titlebar.js';
-import Fusszeile_Component from './Fusszeile.js';
-import './Impressum.css'
+import Titlebar_Component from '../Titlebar.js';
+import Fusszeile_Component from '../Fusszeile.js';
+import '../format/general.css'
 
 class AGBs extends React.Component {
     constructor() {
@@ -15,7 +15,7 @@ class AGBs extends React.Component {
       return(
         <>
         <Titlebar_Component></Titlebar_Component>
-            <ul><ul><ul>
+                <div className="text-format">
                 <title>Allgemeine Geschäftsbedingungen mit Kundeninformationen</title>
                 <a><br /></a>
                 <h2>Inhaltsverzeichnis</h2>
@@ -43,7 +43,7 @@ class AGBs extends React.Component {
                     <h2>§2 Vertragsschluss</h2>
                     <p><b>2.1</b> Die folgenden Regelungen über den Vertragsschluss gelten für Bestellung über den Internetshop <a className="Impressum-link" href="http://localhost:3000/" target="_blank" rel="noopener noreferrer"><dfn>www.flaschen-ag.de</dfn></a></p>
                     <p><b>2.2</b> Im Falle des Vertragsschlusses kommt der Vertrag mit der <br/>Die Flaschen AG<br/>Am Flaschenplatz 3a<br/>10247 Berlin<br/></p>
-                    <p>E-Mail:<a className="Impressum-link" href="mailto:agb@flaschen.de" target="_blank" rel="noopener noreferrer"><dfn>agb@flaschen.de</dfn></a></p>
+                    <p>E-Mail:<a className="general-link" href="mailto:agb@flaschen.de" target="_blank" rel="noopener noreferrer"><dfn>agb@flaschen.de</dfn></a></p>
                     <p>zustande.</p>
                     <p><b>2.3</b> Die im Online-Shop des Verkäufers enthaltenen Produktbeschreibungen stellen keine verbindlichen Angebote seitens des Verkäufers dar, sondern dienen zur Abgabe eines verbindlichen Angebots durch den Kunden.</p>
                     <p><b>2.4</b> Der Kunde kann das Angebot über das in den Online-Shop des Verkäufers integrierte Online-Bestellformular abgeben. Dabei gibt der Kunde, nachdem er die ausgewählten Waren in den virtuellen Warenkorb gelegt und den elektronischen Bestellprozess durchlaufen hat, durch Klicken des den Bestellvorgang abschließenden Buttons [„zahlungspflichtig bestellen“] ein rechtlich verbindliches Vertragsangebot in Bezug auf die im Warenkorb enthaltenen Waren ab. Die Bestellung kann jedoch nur abgegeben und übermittelt werden, wenn der Kunde durch Klicken des Buttons [„AGB akzeptieren“] und des Buttons [„Widerrufsbelehrung akzeptieren“] diese Vertragsbedingungen akzeptiert und dadurch in seine Bestellung einbezogen hat. Unmittelbar nach Absenden der Bestellung erhält der Kunde von dem Verkäufer eine Bestellbestätigung, die jedoch noch keine Annahme des Vertragsangebots darstellt.</p>
@@ -119,13 +119,12 @@ class AGBs extends React.Component {
                     <h2>§13 Gerichtsstand</h2>
                     <p>Handelt der Kunde als Kaufmann, juristische Person des öffentlichen Rechts oder öffentlich-rechtliches Sondervermögen mit Sitz im Hoheitsgebiet der Bundesrepublik Deutschland, ist ausschließlicher Gerichtsstand für alle Streitigkeiten aus diesem Vertrag der Geschäftssitz des Verkäufers. Hat der Kunde seinen Sitz außerhalb des Hoheitsgebiets der Bundesrepublik Deutschland, so ist der Geschäftssitz des Verkäufers ausschließlicher Gerichtsstand für alle Streitigkeiten aus diesem Vertrag, wenn der Vertrag oder Ansprüche aus dem Vertrag der beruflichen oder gewerblichen Tätigkeit des Kunden zugerechnet werden können. Der Verkäufer ist in den vorstehenden Fällen jedoch in jedem Fall berechtigt, das Gericht am Sitz des Kunden anzurufen.</p>
                     <h2>§14 Alternative Streitbeilegung</h2>
-                    <p><b>14.1</b> Die EU-Kommission stellt im Internet unter folgendem Link eine Plattform zur Online-Streitbeilegung bereit: <a className="Impressum-link" href="https://ec.europa.eu/consumers/odr" target="_blank">https://ec.europa.eu/consumers/odr</a></p>
+                    <p><b>14.1</b> Die EU-Kommission stellt im Internet unter folgendem Link eine Plattform zur Online-Streitbeilegung bereit: <a className="general-link" href="https://ec.europa.eu/consumers/odr" target="_blank">https://ec.europa.eu/consumers/odr</a></p>
                     <p>Diese Plattform dient als Anlaufstelle zur außergerichtlichen Beilegung von Streitigkeiten aus Online-Kauf- oder Dienstleistungsverträgen, an denen ein Verbraucher beteiligt ist.</p>
                     <p><b>14.2</b> Der Verkäufer ist zur Teilnahme an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle weder verpflichtet noch bereit.</p>
                     <a><br /></a>
-                    <dfn><strong>Displaymer:</strong> Es wurde sich inhaltlich an den <a className="Impressum-link" href="https://de.air-up.com/terms/" target="_blank" rel="noopener noreferrer"><dfn>AGBs der Firma Air-Up</dfn></a> Orientiert. Alle Angeben sind nicht verplichtend.</dfn>
-
-            </ul></ul></ul>
+                    <dfn><strong>Displaymer:</strong> Es wurde sich inhaltlich an den <a className="general-link" href="https://de.air-up.com/terms/" target="_blank" rel="noopener noreferrer"><dfn>AGBs der Firma Air-Up</dfn></a> Orientiert. Alle Angeben sind nicht verplichtend.</dfn>
+                </div>
         <Fusszeile_Component></Fusszeile_Component>
         </>   
       );

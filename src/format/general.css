@@ -1,0 +1,48 @@
+p {
+    font-size: 1rem;
+    font-family: sans-serif;
+    margin: 20px;
+}
+
+.general-link {
+    color: rgb(65, 144, 65);
+    cursor: url(../images/general/Pointer_32_x_32.png) 10 0, pointer;
+  }
+  
+  .text-format {
+    cursor: url(../images/general/cursor_32_x_32_Neu.png) 10 0, none;
+    padding: 0px 100px 0px 100px;
+  }
+  .text-Uebeschrift_center_1 {
+    text-align: center;
+    font-size: xx-large;
+    font-weight: 500;
+    color: rgb(14, 77, 136);
+    cursor: url(../images/general/cursor_32_x_32_Neu.png) 10 0, none;
+    padding: 0px 100px 0px 100px;
+  }
+  .text-Uebeschrift_center_2 {
+    text-align: center;
+    font-size: x-large;
+    font-weight: 500;
+    color: rgb(87, 92, 86);
+    cursor: url(../images/general/cursor_32_x_32_Neu.png) 10 0, none;
+    padding: 0px 100px 0px 100px;
+  }
+  .text-Uebeschrift_center_3 {
+    text-align: left;
+    font-size: x-large;
+    font-weight: 500;
+    color: rgb(28, 151, 3);
+    cursor: url(../images/general/cursor_32_x_32_Neu.png) 10 0, none;
+    padding: 10px 10px 10px 10px;
+  }
+
+  .pic-mid-full {
+    height: flex;
+    width: 45%;
+    display: flex;
+    padding: 10px 20px 20px 10px;
+    cursor: url(../images/general/cursor_32_x_32_Neu.png) 10 0, none;
+  }
+  

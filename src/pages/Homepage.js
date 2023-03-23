@@ -2,13 +2,13 @@ import React, {Component, useState} from "react";
 import {Link} from "react-router-dom";
 import { ReactDOM } from "react";
 import styled from "styled-components";
-import './App.css';
-import './Titlebar.css';
-import { clickTest } from "./ClickFunctionTest";
-import Flasche from './images/general/Logo_Schriftzug.png';
-import Logo from './images/general/CompanyLogo.png';
-import Banner from './images/general/Banner.png'
-import Logout from './images/general/logout.png'
+import '../format/App.css';
+import '../format/Titlebar.css';
+import { clickTest } from "../ClickFunctionTest";
+import Flasche from '../images/general/Logo_Schriftzug.png';
+import Logo from '../images/general/CompanyLogo.png';
+import Banner from '../images/general/Banner.png'
+import Logout from '../images/general/logout.png'
 
 
 
