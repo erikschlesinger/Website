@@ -24,15 +24,19 @@ class Impressum extends React.Component {
                 <a><br /></a>
                 <a>Telefon: <dfn>+(49) 30 50081-01</dfn><br /></a>
                 <a>Fax:<dfn> +(49) 30 50081-02</dfn><br /></a>
-                <a>E-Mail:<dfn> info@flaschen-ag.de</dfn><br /></a>
-                <a>Internet:&nbsp;</a>
-                <a
+                <a>E-Mail: <a 
+                  className="Impressum-link" 
+                  href="mailto:info@flaschen.de" 
+                  target="_blank" 
+                  rel="noopener noreferrer">
+                    <dfn>agb@flaschen.de</dfn></a><br /></a>    
+                <a>Internet: <a
                     className="Impressum-link"
                     href="http://localhost:3000/"
                     target="_self"
                     rel="noopener noreferrer"
-                    color="#07a837"
-                ><dfn>www.flaschen-ag.de</dfn><br /></a>
+                    color="#07a837">
+                      <dfn>www.flaschen-ag.de</dfn></a><br /></a>
                 <a><br /></a>
                 <a>Geschäftsführung: <dfn>Erik Schlesinger (CEO)</dfn><br /></a>
                 <a>Gesellschaftler: <dfn>ppa. Dominik Lau (CSO), ppa. Ramzan Dadiev (CTO), i.V. Celina Bott (CPO)</dfn><br /></a>
