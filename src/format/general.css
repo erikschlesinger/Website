@@ -40,7 +40,7 @@ p {
 
   .pic-mid-full {
     height: flex;
-    width: 45%;
+    width: 30%;
     display: flex;
     padding: 10px 20px 20px 10px;
     cursor: url(../images/general/cursor_32_x_32_Neu.png) 10 0, none;

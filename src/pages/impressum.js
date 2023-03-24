@@ -25,10 +25,10 @@ class Impressum extends React.Component {
                 <a>Fax:<dfn> +(49) 30 50081-02</dfn><br /></a>
                 <a>E-Mail: <a 
                   className="general-link" 
-                  href="mailto:info@flaschen.de" 
+                  href="mailto:info@flaschen-ag.de" 
                   target="_blank" 
                   rel="noopener noreferrer">
-                    <dfn>agb@flaschen.de</dfn></a><br /></a>    
+                    <dfn>info@flaschen-ag.de</dfn></a><br /></a>    
                 <a>Internet: <a
                     className="general-link"
                     href="http://localhost:3000/"
@@ -42,6 +42,7 @@ class Impressum extends React.Component {
                 <a>Handelsregister: <dfn>Amtsgericht Berlin, Abteilung B, Nr. 8236</dfn><br /></a>
                 <a><br /></a>
                 <a>Umsatzsteuer-ID-Nr.:<dfn> DE 119631149</dfn></a>
+                <a><br /></a>
                 <a><br /></a>
                 <a><br /></a>
                 <a><br /></a>

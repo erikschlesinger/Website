@@ -16,10 +16,10 @@ class Titlebar extends React.Component {
 <div class="topnav">
   <pic class="picture" href="#home"><img src={Flasche} className="App-logo_fl" alt="logo-abbildung"/></pic>
   <a href="/">Startseite</a>
-  <a href="#news">Neuigkeiten</a>
+  <a href="News">Neuigkeiten</a>
   <a href="Contact">Kontakt</a>
   <a href="About">Über uns</a>
-  <a href="#shop">Kaufe jetzt deine Flasche!</a>
+  <a href="Shop">Kaufe jetzt deine Flasche!</a>
  <a href="Login"><img src={Logout} className="Logout" alt="logo-abbildung"/></a>
 </div>
     <a href="/"><img src={Banner} className="App-banner" alt="logo der Flasche"/></a>

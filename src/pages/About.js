@@ -21,7 +21,7 @@ class About extends React.Component {
                 Unsere Vision
               </div>
               <div className="text-Uebeschrift_center_2">
-                  das Beste Trinkerlebnis für jeden!
+                  Das Beste Trinkerlebnis für jede*n!
                 </div>
               <a>
               <a><br /></a>

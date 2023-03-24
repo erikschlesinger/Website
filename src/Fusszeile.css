@@ -8,6 +8,7 @@
   width: 100%;
   display: block;
   margin-top: 20px;
+  cursor: url(./cursor_32_x_32_Neu.png) 10 0, none;
 }
 
 /* Style the links inside the navigation bar */
@@ -22,6 +23,7 @@
 .navbar a:hover {
   background-color: #f2f2f2;
   color: black;
+  cursor: url(./Pointer_32_x_32.png) 10 0, pointer;
 }
 
 /* Add a color to the active/current link */

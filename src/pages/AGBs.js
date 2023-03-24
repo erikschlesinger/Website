@@ -41,7 +41,7 @@ class AGBs extends React.Component {
                     <p><b>1.3</b> Verbraucher im Sinne dieser AGB ist jede natürliche Person, die mindestens 18 Jahre alt sind, und die ein Rechtsgeschäft zu Zwecken abschließt, die überwiegend weder ihrer gewerblichen noch ihrer selbständigen beruflichen Tätigkeit zugerechnet werden können. Unternehmer im Sinne dieser AGB ist eine natürliche oder juristische Person oder eine rechtsfähige Personengesellschaft, die bei Abschluss eines Rechtsgeschäfts in Ausübung ihrer gewerblichen oder selbständigen beruflichen Tätigkeit handelt.</p>
                     <p><b>1.4</b> Die Angebote des Verkäufers richten sich nur an Verbraucher und Unternehmer als Endverbraucher. Die gewerbliche Wiederveräußerung der Produkte ist untersagt. Der Verkäufer behält sich vor, Angebote auf den Abschluss von Kaufverträgen abzulehnen, wenn sie den Anschein erwecken, dem gewerblichen Weiterverkauf zu dienen.</p>
                     <h2>§2 Vertragsschluss</h2>
-                    <p><b>2.1</b> Die folgenden Regelungen über den Vertragsschluss gelten für Bestellung über den Internetshop <a className="Impressum-link" href="http://localhost:3000/" target="_blank" rel="noopener noreferrer"><dfn>www.flaschen-ag.de</dfn></a></p>
+                    <p><b>2.1</b> Die folgenden Regelungen über den Vertragsschluss gelten für Bestellung über den Internetshop <a className="general-link" href="http://localhost:3000/" target="_blank" rel="noopener noreferrer"><dfn>www.flaschen-ag.de</dfn></a></p>
                     <p><b>2.2</b> Im Falle des Vertragsschlusses kommt der Vertrag mit der <br/>Die Flaschen AG<br/>Am Flaschenplatz 3a<br/>10247 Berlin<br/></p>
                     <p>E-Mail:<a className="general-link" href="mailto:agb@flaschen.de" target="_blank" rel="noopener noreferrer"><dfn>agb@flaschen.de</dfn></a></p>
                     <p>zustande.</p>
@@ -123,7 +123,7 @@ class AGBs extends React.Component {
                     <p>Diese Plattform dient als Anlaufstelle zur außergerichtlichen Beilegung von Streitigkeiten aus Online-Kauf- oder Dienstleistungsverträgen, an denen ein Verbraucher beteiligt ist.</p>
                     <p><b>14.2</b> Der Verkäufer ist zur Teilnahme an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle weder verpflichtet noch bereit.</p>
                     <a><br /></a>
-                    <dfn><strong>Displaymer:</strong> Es wurde sich inhaltlich an den <a className="general-link" href="https://de.air-up.com/terms/" target="_blank" rel="noopener noreferrer"><dfn>AGBs der Firma Air-Up</dfn></a> Orientiert. Alle Angeben sind nicht verplichtend.</dfn>
+                    <dfn><strong>Disclaimer:</strong> Es wurde sich inhaltlich an den <a className="general-link" href="https://de.air-up.com/terms/" target="_blank" rel="noopener noreferrer"><dfn>AGBs der Firma Air-Up</dfn></a> Orientiert. Alle Angeben sind nicht verplichtend.</dfn>
                 </div>
         <Fusszeile_Component></Fusszeile_Component>
         </>   
