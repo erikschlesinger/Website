@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.007e5885.css",
+    "main.js": "/static/js/main.b27c3d18.js",
+    "static/js/787.e0677ef5.chunk.js": "/static/js/787.e0677ef5.chunk.js",
+    "static/media/Banner.png": "/static/media/Banner.a023b5eb85233b277f06.png",
+    "static/media/CompanyLogo.png": "/static/media/CompanyLogo.0659ddc4c0397ae1799f.png",
+    "static/media/Flasche_erste_Skizze.png": "/static/media/Flasche_erste_Skizze.f7b653e2a4ed4dafd999.png",
+    "index.html": "/index.html",
+    "main.007e5885.css.map": "/static/css/main.007e5885.css.map",
+    "main.b27c3d18.js.map": "/static/js/main.b27c3d18.js.map",
+    "787.e0677ef5.chunk.js.map": "/static/js/787.e0677ef5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.007e5885.css",
+    "static/js/main.b27c3d18.js"
+  ]
+}
