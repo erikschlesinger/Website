@@ -6,6 +6,7 @@
     outline: rgb(79, 166, 71);
     outline-width: medium; 
     outline-style: ridge;
+    cursor: url(./cursor_32_x_32_Neu.png) 10 0, none;
   }
   
   /*Hier werden alle Attribute von topnav an das HTML Attribut <a> vererbt*/
@@ -13,7 +14,7 @@
   .topnav a {
     float: left;
     color: #ffffff;
-    text-align: center;
+    text-align: left;
     padding: 16px 16px;
     text-decoration: none;
     font-size: 17px;

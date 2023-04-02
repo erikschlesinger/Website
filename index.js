@@ -1,15 +1,15 @@
-import Login from './pages/Login'
-import App from './pages/App'
-import Contact from './pages/Contact'
-import Impressum from './pages/impressum';
-import AGBs from './pages/AGBs';
-import About from './pages/About';
-import Shop from './pages/Shop';
-import News from './pages/News';
+import Login from './src/pages/Login'
+import App from './src/pages/App'
+import Contact from './src/pages/Contact'
+import Impressum from './src/pages/impressum';
+import AGBs from './src/pages/AGBs';
+import About from './src/pages/About';
+import Shop from './src/pages/Shop';
+import News from './src/pages/News';
 
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import reportWebVitals from './reportWebVitals';
+import reportWebVitals from './src/reportWebVitals';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -18,6 +18,10 @@ import {
 const router = createBrowserRouter([
   {
     path: "/",
+    element: <App />
+  },
+  {
+    path: "/App",
     element: <App />
   },
   {
@@ -41,11 +45,11 @@ const router = createBrowserRouter([
     element: <About />
   },
   {
-    path: "/Shop",
+    path: "Shop",
     element: <Shop />
   },
   {
-    path: "/News",
+    path: "News",
     element: <News />
   }
 ]);
@@ -56,4 +60,7 @@ const root = ReactDOM.createRoot(document.getElementById('root')).render(
   </React.StrictMode>
 );
 
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
