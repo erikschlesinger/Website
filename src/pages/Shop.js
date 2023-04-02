@@ -1,4 +1,4 @@
-import React, {Component, useState} from "react";
+import React from "react";
 import Titlebar_Component from '../Titlebar.js';
 import Fusszeile_Component from '../Fusszeile.js';
 import '../format/general.css'
@@ -6,9 +6,6 @@ import '../format/general.css'
 class Shop extends React.Component {
     constructor() {
         super();
-        this.state ={
-          value: {value}
-        };
       }
 
     render(){
@@ -18,16 +15,12 @@ class Shop extends React.Component {
           <div className="text-format">
                 <strong>Shop<br /></strong>
                 
-                <a><br /></a>
-                <a><br /></a>
-                <a><br /></a>
+
             </div>
         <Fusszeile_Component></Fusszeile_Component>
         </>   
       );
     }
 }
-  //Falls ihr den State für Value ändern wollt ändert das hier
-  var value = 5;
 
 export default Shop;

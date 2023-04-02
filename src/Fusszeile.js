@@ -1,4 +1,4 @@
-import React, {Component, useState} from "react";
+import React from "react";
 import './Fusszeile.css';
 
 
@@ -9,10 +9,10 @@ class Fusszeile extends React.Component {
         return(
         <div class="navbar">
           
-          <a href="App">Home</a>
-          <a href="Contact">Kontakt</a>
-          <a href="Impressum">Impressum</a>
-          <a href="AGBs">AGBs</a>
+          <a href="/">Home</a>
+          <a href="/Contact">Kontakt</a>
+          <a href="/Impressum">Impressum</a>
+          <a href="/AGBs">AGBs</a>
           </div>
         )
       }
