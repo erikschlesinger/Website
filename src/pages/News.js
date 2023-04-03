@@ -3,6 +3,7 @@ import Titlebar_Component from '../Titlebar.js';
 import Fusszeile_Component from '../Fusszeile.js';
 import '../format/general.css'
 
+
 class News extends React.Component {
   constructor() {
     super();

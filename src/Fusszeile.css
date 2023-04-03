@@ -31,3 +31,7 @@
   background-color: rgb(79, 166, 71);
   color: white;
 }
+
+.fixedPosition {
+  position: fixed;
+}

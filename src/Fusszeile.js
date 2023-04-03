@@ -7,7 +7,7 @@ class Fusszeile extends React.Component {
 
     render(){
         return(
-        <div class="navbar">
+        <div className="navbar">
           
           <a href="/">Home</a>
           <a href="/Contact">Kontakt</a>
