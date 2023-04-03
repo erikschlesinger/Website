@@ -1,6 +1,13 @@
+.colForm {
+  margin-top: 3%;
+}
+
 .order-form {
   max-width: 400px;
-  margin: 0 auto;
+  padding: 25px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .form-group {
@@ -42,4 +49,21 @@ input[type="number"]:focus {
   border: none;
   background-color: #0066cc;
   color: #fff
+}
+
+.colDescriptions {
+  margin-top: 2%;
+  margin-left: 5%;
+}
+
+.logo {
+  width: 90%;
+  height: auto;
+}
+
+.skizze {
+  width: 60%;
+  height: auto;
+  margin-top: 5%;
+  margin-left: 15%;
 }

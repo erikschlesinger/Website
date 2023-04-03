@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import '../format/OrderForm.css';
 import Logo from '../images/general/CompanyLogo.png';
+import Skizze_v1 from '../images/AboutUS/Flasche_erste_Skizze.png'
+import Titlebar_Component from '../Titlebar.js';
+import Fusszeile_Component from '../Fusszeile.js';
+import { Container, Row, Col } from 'react-bootstrap';
+
 
 function OrderForm() {
   const [address, setAddress] = useState('');
@@ -11,7 +16,7 @@ function OrderForm() {
   const [IBAN, setIBAN] = useState('');
   const [quantity, setQuantity] = useState(1);
   const [price, setPrice] = useState(40);
-  const [storage, setStorage] = useState(100);
+  const [storage, setStorage] = useState(10);
 
   useEffect(() => {
     setPrice(40 * quantity);
@@ -54,14 +59,15 @@ function OrderForm() {
   };
 
   return (
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <img src={Logo} alt="Your Image" class="img-fluid" />
-        </div>
-        <div class="col-md-6">
-          <form>
-
+    <>
+      <Titlebar_Component></Titlebar_Component>
+      <Container fluid>
+        <Row>
+          <Col xs={8} className='colDescriptions'>
+            <img src={Logo} alt="image description" className='logo' />
+            <img src={Skizze_v1} alt="image description" className='skizze' />
+          </Col>
+          <Col className='colForm'>
 
             <form className="order-form" onSubmit={handleSubmit}>
               <div className="form-group">
@@ -105,12 +111,11 @@ function OrderForm() {
               </div>
               <button type="submit">Submit Order</button>
             </form>
-
-
-          </form>
-        </div>
-      </div>
-    </div>
+          </Col>
+        </Row>
+      </Container>
+      <Fusszeile_Component></Fusszeile_Component>
+    </>
   );
 }
 
