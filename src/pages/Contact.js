@@ -11,64 +11,62 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 
-class Contact extends React.Component {
 
-  clickSubmit = () => {
-    
+function Contact() {
+
+  const clickSubmit = () => {
     alert("Vielen Dank deine Anfrage! Du wirst in Kürze von uns hören");
   }
 
-  render() {
-    return (
-      <>
-        <Titlebar_Component></Titlebar_Component>
-        <Container>
-          <Row>
-            <Col></Col>
-            <Col xs={6}><Form>
-              <div className="request-form">
-                <Form.Group className="mx-2 mb-3">
-                  <Form.Label className="mt-2" id="labelTitel"><b>Wozu hast du eine Frage?</b></Form.Label>
-                  <p><Form.Text className="text-muted">
-                    Die Einordnung deiner Frage hilft uns dabei schneller auf dein Anliegen reagieren zu können! :^)
-                  </Form.Text></p>
-                  <Form.Select>
-                    <option>Fragen zum Produkt</option>
-                    <option>Fragen zum Unternehmen</option>
-                    <option>Produktbeschwerden</option>
-                    <option>Rücksendungen</option>
-                    <option>Versandprobleme</option>
-                    <option>Erstattungen</option>
-                    <option>Kooperation</option>
-                    <option>Sonstiges</option>
-                  </Form.Select>
-                </Form.Group>
-                <Form.Group className="mx-2 mb-3" controlId="formBasicEmail">
-                  <b><Form.Label>Email Addresse</Form.Label></b>
-                  <Form.Control type="email" placeholder="Gib bitte deine E-Mail Adresse an." />
-                  <Form.Text className="text-muted">
-                    Keine Sorge. Wir geben deine E-Mail an niemanden weiter!
-                  </Form.Text>
-                </Form.Group>
+  return (
+    <>
+      <Titlebar_Component></Titlebar_Component>
+      <Container>
+        <Row>
+          <Col></Col>
+          <Col xs={6}><Form>
+            <div className="request-form">
+              <Form.Group className="mx-2 mb-3">
+                <Form.Label className="mt-2" id="labelTitel"><b>Wozu hast du eine Frage?</b></Form.Label>
+                <p><Form.Text className="text-muted">
+                  Die Einordnung deiner Frage hilft uns dabei schneller auf dein Anliegen reagieren zu können! :^)
+                </Form.Text></p>
+                <Form.Select>
+                  <option>Fragen zum Produkt</option>
+                  <option>Fragen zum Unternehmen</option>
+                  <option>Produktbeschwerden</option>
+                  <option>Rücksendungen</option>
+                  <option>Versandprobleme</option>
+                  <option>Erstattungen</option>
+                  <option>Kooperation</option>
+                  <option>Sonstiges</option>
+                </Form.Select>
+              </Form.Group>
+              <Form.Group className="mx-2 mb-3" controlId="formBasicEmail">
+                <b><Form.Label>Email Addresse</Form.Label></b>
+                <Form.Control type="email" placeholder="Gib bitte deine E-Mail Adresse an." />
+                <Form.Text className="text-muted">
+                  Keine Sorge. Wir geben deine E-Mail an niemanden weiter!
+                </Form.Text>
+              </Form.Group>
 
-                <Form.Group className="mx-2 mb-3" controlId="exampleForm.ControlTextarea1">
-                  <b><Form.Label>Deine Nachricht</Form.Label></b>
-                  <Form.Control as="textarea" rows={3} />
-                </Form.Group>
-                <div id="submitButton">
-                  <Submit onClick={this.clickSubmit}>Abschicken</Submit>
-                </div>
+              <Form.Group className="mx-2 mb-3" controlId="exampleForm.ControlTextarea1">
+                <b><Form.Label>Deine Nachricht</Form.Label></b>
+                <Form.Control as="textarea" rows={3} />
+              </Form.Group>
+              <div id="submitButton">
+                <Submit onClick={clickSubmit}>Abschicken</Submit>
               </div>
-            </Form>
-            </Col>
-            <Col></Col>
-          </Row>
-        </Container>
-        <p><br /></p>
-        <Fusszeile_Component></Fusszeile_Component>
-      </>
-    )
-  }
+            </div>
+          </Form>
+          </Col>
+          <Col></Col>
+        </Row>
+      </Container>
+      <p><br /></p>
+      <Fusszeile_Component></Fusszeile_Component>
+    </>
+  )
 }
 
 const Submit = styled.button`

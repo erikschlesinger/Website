@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import "../format/Login.css"
 import "../index.js"
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 function LoginButton() {
   const navigate = useNavigate();
@@ -11,11 +11,12 @@ function LoginButton() {
   const [password, setPassword] = useState("");
   const [showPopup, setShowPopup] = useState(false); //State um Fehlermeldung ein/auszublenden
   const [showLogin, setShowLogin] = useState(true); //State um Login Fenster ein/auszublenden
+  const [user, setUser] = useState("hallo123");
 
   const handleLogin = (e) => {
     e.preventDefault();
     if (username === "admin@pass.com" && password === "pass") {
-      navigate("/");
+      navigate("/App", { state: { user: "admin" } });
     } else {
       setShowPopup(true); //Popup Fenster einblenden
       setShowLogin(false); //Login Fenster ausblenden
@@ -53,7 +54,7 @@ function LoginButton() {
               </button>
             </div>
             <p className="forgot-password text-right mt-2">
-              Forgot <a href="#">password?</a>
+              Als <Link to="/App" state={{ user: "Gast"}}><a href="#">Gast anmelden</a></Link>
             </p>
           </div>
         </form>)}

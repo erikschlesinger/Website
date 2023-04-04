@@ -3,18 +3,17 @@ import styled from "styled-components";
 import Titlebar_Component from '../Titlebar.js';
 import Fusszeile_Component from '../Fusszeile.js';
 import Logo from '../images/general/CompanyLogo.png';
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
-class App extends React.Component {
 
-  constructor() {
-    super();
-  }
-
-  render() {
+function App() {
+  const location = useLocation();
+  const user = location.state?.user;
+  
     return (
       <>
-        <Titlebar_Component ></Titlebar_Component>
+      
+        <Titlebar_Component user={user}></Titlebar_Component>
         <div className="App" >
           <header>
             <img src={Logo} className="App-logo" alt="Abbildung der Flasche" />
@@ -34,7 +33,6 @@ class App extends React.Component {
       </>
     );
   }
-}
 
 const Button = styled.button`
   background-color: rgb(79, 166, 71);
