@@ -8,6 +8,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 
 function OrderForm() {
+  // Setting up state variables
   const [address, setAddress] = useState('');
   const [zipCode, setZipCode] = useState('');
   const [city, setCity] = useState('');
@@ -17,47 +18,65 @@ function OrderForm() {
   const [quantity, setQuantity] = useState(1);
   const [price, setPrice] = useState(40);
   const [storage, setStorage] = useState(10);
+  const [submitted, setSubmitted] = useState(false);
 
+  // useEffect hook to update the price state variable when the quantity state changes
   useEffect(() => {
     setPrice(40 * quantity);
   }, [quantity]);
 
+  // useEffect hook to update the storage and quantity state variables when the form is submitted and storage state changes
   useEffect(() => {
-    localStorage.setItem('storage', storage);
-  }, [storage]);
+    localStorage.setItem('storage', storage); // Set new Storage
+    // update the quantity state depending on the new storage value
+    if (submitted) {
+      if (storage !== 0) {
+        setQuantity(storage);
+      } else {
+        setQuantity(1);
+      }
+      setSubmitted(false);
+    }
+  }, [storage, submitted]);
 
+  // function to increase the quantity state variable
   const increaseQuantity = () => {
     if (quantity < storage) {
       setQuantity(prevQuantity => prevQuantity + 1);
     }
   };
 
+  // function to decrease the quantity state variable
   const decreaseQuantity = () => {
-    if (quantity > 1) { // check if current quantity is greater than 1
+    if (quantity > 1) {
       setQuantity(prevQuantity => prevQuantity - 1);
     }
   };
 
+  // function to handle form submission
   const handleSubmit = event => {
     event.preventDefault();
 
-    if (address && zipCode && city && country) {
-      if (quantity > storage) {
-        alert('Not enough storage');
+    if (address && zipCode && city && country && nameOnCreditCard && IBAN) { // Checking if all the form fields are filled
+      if (quantity > storage) { // Check if there is enough storage
+        alert('Nicht genügend Flaschen auf Lager');
       } else {
         // Show confirmation prompt
-        const isConfirmed = window.confirm('Are you sure you want to submit this order?');
+        const isConfirmed = window.confirm('Möchten Sie diese Bestellung wirklich absenden?');
         if (isConfirmed) {
+          //update storage state and inform User
           console.log({ address, zipCode, city, country, quantity, price });
           setStorage(prevStorage => prevStorage - quantity);
-          alert(`Order successful. Quantity: ${quantity} Flaschen`);
+          alert(`Bestellung erfolgreich!\nAnzahl: ${quantity} Flaschen\nKaufpreis: ${price} €`);
+          setSubmitted(true); // set submitted flag to true
         }
       }
     } else {
-      alert('Please fill out all fields');
+      alert('Bitte alle Felder ausfüllen');
     }
   };
 
+  // rendering the component
   return (
     <>
       <Titlebar_Component></Titlebar_Component>
@@ -71,23 +90,23 @@ function OrderForm() {
 
             <form className="order-form" onSubmit={handleSubmit}>
               <div className="form-group">
-                <label htmlFor="address">Address:</label>
+                <label htmlFor="address">Straße und Hausnummer:</label>
                 <input type="text" id="address" value={address} onChange={event => setAddress(event.target.value)} />
               </div>
               <div className="form-group">
-                <label htmlFor="zipCode">Zip Code:</label>
+                <label htmlFor="zipCode">Postleitzahl:</label>
                 <input type="text" id="zipCode" value={zipCode} onChange={event => setZipCode(event.target.value)} />
               </div>
               <div className="form-group">
-                <label htmlFor="city">City:</label>
+                <label htmlFor="city">Stadt:</label>
                 <input type="text" id="city" value={city} onChange={event => setCity(event.target.value)} />
               </div>
               <div className="form-group">
-                <label htmlFor="country">Country:</label>
+                <label htmlFor="country">Land:</label>
                 <input type="text" id="country" value={country} onChange={event => setCountry(event.target.value)} />
               </div>
               <div className="form-group">
-                <label htmlFor="nameOnCreditCard">Name on creditcard:</label>
+                <label htmlFor="nameOnCreditCard">Name auf der Kredit-/Debitkarte:</label>
                 <input type="text" id="nameOnCreditCard" value={nameOnCreditCard} onChange={event => setNameOnCreditCard(event.target.value)} />
               </div>
               <div className="form-group">
@@ -95,21 +114,21 @@ function OrderForm() {
                 <input type="text" id="IBAN" value={IBAN} onChange={event => setIBAN(event.target.value)} />
               </div>
               <div className="form-group">
-                <label htmlFor="quantity">Quantity:</label>
+                <label htmlFor="quantity">Anzahl:</label>
                 <div className="quantity-input">
                   <button type="button" onClick={decreaseQuantity}>-</button>
                   <input type="number" id="quantity" value={quantity} onChange={() => { }} max={storage} readOnly />
                   <button type="button" onClick={increaseQuantity}>+</button>
                 </div>
                 <div className="storage">
-                  Storage: {storage}
+                  Im Lager: {storage}
                 </div>
               </div>
               <div className="form-group">
-                <label htmlFor="price">Price:</label>
-                <input type="number" id="price" value={price} disabled />
+                <label htmlFor="price">Gesamtkosten:</label>
+                <input type="currency" id="price" value={price +" €"} disabled />
               </div>
-              <button type="submit">Submit Order</button>
+              <button type="submit">Bestellung aufgeben</button>
             </form>
           </Col>
         </Row>
