@@ -5,15 +5,10 @@ import Impressum from './pages/impressum';
 import AGBs from './pages/AGBs';
 import About from './pages/About';
 import Shop from './pages/Shop';
-import News from './pages/News';
-
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import {createBrowserRouter, RouterProvider} from "react-router-dom";
 
 const router = createBrowserRouter([
   {
@@ -43,10 +38,6 @@ const router = createBrowserRouter([
   {
     path: "/Shop",
     element: <Shop />
-  },
-  {
-    path: "/News",
-    element: <News />
   }
 ]);
 

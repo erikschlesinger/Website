@@ -87,7 +87,6 @@ function OrderForm() {
             <img src={Skizze_v1} alt="image description" className='skizze' />
           </Col>
           <Col className='colForm'>
-
             <form className="order-form" onSubmit={handleSubmit}>
               <div className="form-group">
                 <label htmlFor="address">Straße und Hausnummer:</label>
@@ -126,7 +125,7 @@ function OrderForm() {
               </div>
               <div className="form-group">
                 <label htmlFor="price">Gesamtkosten:</label>
-                <input type="currency" id="price" value={price +" €"} disabled />
+                <input type="currency" id="price" value={price + " €"} disabled />
               </div>
               <button type="submit">Bestellung aufgeben</button>
             </form>
