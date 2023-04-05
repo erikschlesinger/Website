@@ -1,0 +1,81 @@
+.colForm {
+  margin-top: 3%;
+}
+
+.order-form {
+  max-width: 400px;
+  padding: 25px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.2s ease-in-out;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+  outline: none;
+  border-color: #0066cc;
+}
+
+.quantity-input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 150px;
+  margin-top: 8px;
+}
+
+.quantity-input button {
+  padding: 8px;
+  font-size: 16px;
+  border: none;
+  background-color: #0066cc;
+  color: #fff
+}
+
+.colDescriptions {
+  margin-top: 2%;
+  margin-left: 5%;
+}
+
+.logo {
+  width: 90%;
+  height: auto;
+}
+
+.skizze {
+  width: 60%;
+  height: auto;
+  margin-top: 5%;
+  margin-left: 15%;
+}
+
+/* Hide field spinners in Firefox*/
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button,
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+#price {
+  width: 100px;
+  position: relative;
+}
