@@ -2,8 +2,8 @@ import React from "react";
 import '../format/App.css';
 import '../format/Contact.css';
 import styled from "styled-components";
-import Titlebar_Component from '../Titlebar.js';
-import Fusszeile_Component from '../Fusszeile.js';
+import TitlebarComponent from '../Titlebar.js';
+import FusszeileComponent from '../Fusszeile.js';
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col, Form } from 'react-bootstrap';
 import { useLocation } from "react-router-dom";
@@ -18,7 +18,7 @@ function Contact() {
 
   return (
     <>
-      <Titlebar_Component user={user}></Titlebar_Component>
+      <TitlebarComponent user={user}></TitlebarComponent>
       <Container>
         <Row>
           <Col></Col>
@@ -62,7 +62,7 @@ function Contact() {
         </Row>
       </Container>
       <p><br /></p>
-      <Fusszeile_Component user={user}></Fusszeile_Component>
+      <FusszeileComponent user={user}></FusszeileComponent>
     </>
   )
 }

@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React from "react";
 import './Titlebar.css';
 import Flasche from './images/general/Logo_Schriftzug.png';
 import Logout from './images/general/logout.png';

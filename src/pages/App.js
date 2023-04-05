@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import Titlebar_Component from '../Titlebar.js';
-import Fusszeile_Component from '../Fusszeile.js';
+import TitlebarComponent from '../Titlebar.js';
+import FusszeileComponent from '../Fusszeile.js';
 import Logo from '../images/general/CompanyLogo.png';
 import { Link, useLocation } from "react-router-dom";
 
@@ -11,7 +11,7 @@ function App() {
 
   return (
     <>
-      <Titlebar_Component user={user}></Titlebar_Component>
+      <TitlebarComponent user={user}></TitlebarComponent>
       <div className="App" >
         <header>
           <img src={Logo} className="App-logo" alt="Abbildung der Flasche" />
@@ -25,7 +25,7 @@ function App() {
             <Button>Jetzt für 39,99€ bestellen</Button>
           </Link>
         </header>
-        <Fusszeile_Component user={user}></Fusszeile_Component>
+        <FusszeileComponent user={user}></FusszeileComponent>
       </div>
     </>
   );

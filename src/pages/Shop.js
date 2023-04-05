@@ -2,8 +2,8 @@ import { React, useState, useEffect } from 'react';
 import '../format/OrderForm.css';
 import Logo from '../images/general/CompanyLogo.png';
 import Skizze_v1 from '../images/AboutUS/Flasche_erste_Skizze.png'
-import Titlebar_Component from '../Titlebar.js';
-import Fusszeile_Component from '../Fusszeile.js';
+import TitlebarComponent from '../Titlebar.js';
+import FusszeileComponent from '../Fusszeile.js';
 import { Container, Row, Col } from 'react-bootstrap';
 import { useLocation } from "react-router-dom";
 
@@ -82,7 +82,7 @@ function OrderForm() {
   // rendering the component
   return (
     <>
-      <Titlebar_Component user={user}></Titlebar_Component>
+      <TitlebarComponent user={user}></TitlebarComponent>
       <Container fluid>
         <Row>
           <Col xs={8} className='colDescriptions'>
@@ -135,7 +135,7 @@ function OrderForm() {
           </Col>
         </Row>
       </Container>
-      <Fusszeile_Component user={user}></Fusszeile_Component>
+      <FusszeileComponent user={user}></FusszeileComponent>
     </>
   );
 }

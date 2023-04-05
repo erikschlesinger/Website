@@ -51,7 +51,7 @@ function LoginButton() {
               </button>
             </div>
             <p className="forgot-password text-right mt-2">
-              Als <Link to="/App" state={{ user: "Gast" }}><a href="#">Gast anmelden</a></Link>
+              Als <Link to="/App" state={{ user: "Gast" }}><a href="javascript:void(0);">Gast anmelden</a></Link>
             </p>
           </div>
         </form>)}
