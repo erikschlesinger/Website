@@ -41,7 +41,7 @@ function Contact() {
                 </Form.Select>
               </Form.Group>
               <Form.Group className="mx-2 mb-3" controlId="formBasicEmail">
-                <b><Form.Label>Email Addresse</Form.Label></b>
+                <b><Form.Label>Email Adresse</Form.Label></b>
                 <Form.Control type="email" placeholder="Gib bitte deine E-Mail Adresse an." />
                 <Form.Text className="text-muted">
                   Keine Sorge. Wir geben deine E-Mail an niemanden weiter!
