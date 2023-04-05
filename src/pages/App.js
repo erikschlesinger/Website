@@ -12,7 +12,6 @@ function App() {
   
     return (
       <>
-      
         <Titlebar_Component user={user}></Titlebar_Component>
         <div className="App" >
           <header>
@@ -23,11 +22,11 @@ function App() {
                 <code>Nur noch 10 Stück auf Lager</code>
               </p>
             </p>
-            <Link to="/Shop">
+            <Link to="/Shop" state={{ user: user}}>
             <Button>Jetzt für 39,99€ bestellen</Button>
             </Link>
           </header>
-          <Fusszeile_Component></Fusszeile_Component>
+          <Fusszeile_Component user={user}></Fusszeile_Component>
         </div>
 
       </>

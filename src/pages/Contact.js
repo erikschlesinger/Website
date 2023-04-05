@@ -10,9 +10,11 @@ import '../format/Contact.css';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
-
+import {useLocation } from "react-router-dom";
 
 function Contact() {
+  const location = useLocation();
+  const user = location.state?.user;
 
   const clickSubmit = () => {
     alert("Vielen Dank deine Anfrage! Du wirst in Kürze von uns hören");
@@ -20,7 +22,7 @@ function Contact() {
 
   return (
     <>
-      <Titlebar_Component></Titlebar_Component>
+      <Titlebar_Component user={user}></Titlebar_Component>
       <Container>
         <Row>
           <Col></Col>
@@ -64,7 +66,7 @@ function Contact() {
         </Row>
       </Container>
       <p><br /></p>
-      <Fusszeile_Component></Fusszeile_Component>
+      <Fusszeile_Component user={user}></Fusszeile_Component>
     </>
   )
 }

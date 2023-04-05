@@ -11,11 +11,10 @@ function LoginButton() {
   const [password, setPassword] = useState("");
   const [showPopup, setShowPopup] = useState(false); //State um Fehlermeldung ein/auszublenden
   const [showLogin, setShowLogin] = useState(true); //State um Login Fenster ein/auszublenden
-  const [user, setUser] = useState("hallo123");
 
   const handleLogin = (e) => {
     e.preventDefault();
-    if (username === "admin@pass.com" && password === "pass") {
+    if (username.toLowerCase() === "admin@flaschen-ag.de" && password === "admin") {
       navigate("/App", { state: { user: "admin" } });
     } else {
       setShowPopup(true); //Popup Fenster einblenden

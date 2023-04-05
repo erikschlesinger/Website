@@ -5,9 +5,12 @@ import Skizze_v1 from '../images/AboutUS/Flasche_erste_Skizze.png'
 import Titlebar_Component from '../Titlebar.js';
 import Fusszeile_Component from '../Fusszeile.js';
 import { Container, Row, Col } from 'react-bootstrap';
+import { useLocation } from "react-router-dom";
 
 
 function OrderForm() {
+  const location = useLocation();
+  const user = location.state?.user;
   // Setting up state variables
   const [address, setAddress] = useState('');
   const [zipCode, setZipCode] = useState('');
@@ -79,7 +82,7 @@ function OrderForm() {
   // rendering the component
   return (
     <>
-      <Titlebar_Component></Titlebar_Component>
+      <Titlebar_Component user={user}></Titlebar_Component>
       <Container fluid>
         <Row>
           <Col xs={8} className='colDescriptions'>
@@ -132,7 +135,7 @@ function OrderForm() {
           </Col>
         </Row>
       </Container>
-      <Fusszeile_Component></Fusszeile_Component>
+      <Fusszeile_Component user={user}></Fusszeile_Component>
     </>
   );
 }

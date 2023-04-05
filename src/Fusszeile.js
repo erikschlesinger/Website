@@ -1,21 +1,23 @@
 import React from "react";
 import './Fusszeile.css';
+import { useNavigate } from "react-router-dom";
 
+function Fusszeile(props) {
 
+  const navigate = useNavigate();
+  const handleNavigate = (navPath) => {
+    navigate(navPath, { state: { user: props.user } });
+  }
 
-class Fusszeile extends React.Component {
+  return (
+    <div className="navbar">
 
-    render(){
-        return(
-        <div className="navbar">
-          
-          <a href="/">Home</a>
-          <a href="/Contact">Kontakt</a>
-          <a href="/Impressum">Impressum</a>
-          <a href="/AGBs">AGBs</a>
-          </div>
-        )
-      }
-};
+      <a href="javascript:void(0);" onClick={() => handleNavigate("/App")}>Home</a>
+      <a href="javascript:void(0);" onClick={() => handleNavigate("/Contact")}>Kontakt</a>
+      <a href="javascript:void(0);" onClick={() => handleNavigate("/Impressum")}>Impressum</a>
+      <a href="javascript:void(0);" onClick={() => handleNavigate("/AGBs")}>AGBs</a>
+    </div>
+  )
+}
 
 export default Fusszeile;
