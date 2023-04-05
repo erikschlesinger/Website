@@ -1,8 +1,6 @@
-import React from "react"
+import { useState, React } from "react"
 import "bootstrap/dist/css/bootstrap.min.css"
 import "../format/Login.css"
-import "../index.js"
-import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 
 function LoginButton() {
@@ -53,7 +51,7 @@ function LoginButton() {
               </button>
             </div>
             <p className="forgot-password text-right mt-2">
-              Als <Link to="/App" state={{ user: "Gast"}}><a href="#">Gast anmelden</a></Link>
+              Als <Link to="/App" state={{ user: "Gast" }}><a href="#">Gast anmelden</a></Link>
             </p>
           </div>
         </form>)}

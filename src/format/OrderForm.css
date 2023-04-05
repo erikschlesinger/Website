@@ -71,7 +71,9 @@ input[type="number"]:focus {
 /* Hide field spinners in Firefox*/
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button,
-input[type="number"] {-moz-appearance: textfield;}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
 
 #price {
   width: 100px;

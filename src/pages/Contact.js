@@ -1,16 +1,12 @@
 import React from "react";
-import styled from "styled-components";
 import '../format/App.css';
-import '../Titlebar.css';
+import '../format/Contact.css';
+import styled from "styled-components";
 import Titlebar_Component from '../Titlebar.js';
 import Fusszeile_Component from '../Fusszeile.js';
-import Form from 'react-bootstrap/Form';
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import '../format/Contact.css';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Container from 'react-bootstrap/Container';
-import {useLocation } from "react-router-dom";
+import { Container, Row, Col, Form } from 'react-bootstrap';
+import { useLocation } from "react-router-dom";
 
 function Contact() {
   const location = useLocation();

@@ -6,9 +6,9 @@
 .App-logo {
   height: 40vmin;
   outline: #ddd;
-  outline-width: medium; 
+  outline-width: medium;
   outline-style: ridge;
-  outline-offset: 0; 
+  outline-offset: 0;
   cursor: url(../images/general/Pointer_32_x_32.png) 10 0, pointer;
 }
 
@@ -34,24 +34,6 @@
   padding: 0px 0px;
 }
 
-/* Lässt das Logo Zeitbestimmung
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-*/
-
 .App-header {
   background-color: #e8eaed;
   min-height: 100vh;
@@ -63,28 +45,6 @@
   color: rgb(0, 0, 0);
 }
 
-/*
-.title_bar {
-  background-color: rgb(65, 144, 65);
-  min-height: 5vh;
-  display: flex;
-  flex-direction: column;
-  align-items: right;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: rgb(255, 255, 255);
-  outline: rgb(79, 166, 71);
-  outline-width: medium; 
-  outline-style: ridge;
-  outline-offset: 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-}
-*/
-
 .App-link {
   color: #61dafb;
 }
-
-
-

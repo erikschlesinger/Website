@@ -126,5 +126,4 @@ function AGBs() {
   );
 }
 
-
 export default AGBs;

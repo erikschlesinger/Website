@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { React, useState, useEffect } from 'react';
 import '../format/OrderForm.css';
 import Logo from '../images/general/CompanyLogo.png';
 import Skizze_v1 from '../images/AboutUS/Flasche_erste_Skizze.png'

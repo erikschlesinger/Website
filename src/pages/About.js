@@ -3,7 +3,7 @@ import Titlebar_Component from '../Titlebar';
 import Fusszeile_Component from '../Fusszeile';
 import '../format/general.css'
 import Skizze_v1 from '../images/AboutUS/Flasche_erste_Skizze.png'
-import {useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 function About() {
   const location = useLocation();
