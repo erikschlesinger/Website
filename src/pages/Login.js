@@ -25,22 +25,22 @@ function LoginButton() {
       {showLogin && ( // showLogin-State auf das Login Fenster mappen
         <form className="Auth-form" onSubmit={handleLogin}>
           <div className="Auth-form-content">
-            <h3 className="Auth-form-title">Sign In</h3>
+            <h3 className="Auth-form-title">Anmelden</h3>
             <div className="form-group mt-3">
-              <label>Email address</label>
+              <label>Email Adresse</label>
               <input
                 type="email"
                 className="form-control mt-1"
-                placeholder="Enter email"
+                placeholder="Email eingeben"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)} />
             </div>
             <div className="form-group mt-3">
-              <label>Password</label>
+              <label>Passwort</label>
               <input
                 type="password"
                 className="form-control mt-1"
-                placeholder="Enter password"
+                placeholder="Passwort eingeben"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />
@@ -62,9 +62,10 @@ function LoginButton() {
           <button
             type="button"
             className="btn btn-primary"
+            style={{ marginTop: "3%" }}
             // Login Fenster anzeigen / Fehlermeldung ausblenden
             onClick={() => setShowPopup(false) & setShowLogin(true)}>
-            Close
+            Zurück
           </button>
         </div>
       )}
