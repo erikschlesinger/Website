@@ -1,7 +1,6 @@
 import React from "react";
 import '../format/App.css';
 import '../format/Contact.css';
-import styled from "styled-components";
 import TitlebarComponent from '../Titlebar.js';
 import FusszeileComponent from '../Fusszeile.js';
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
@@ -12,8 +11,18 @@ function Contact() {
   const location = useLocation();
   const user = location.state?.user;
 
-  const clickSubmit = () => {
-    alert("Vielen Dank deine Anfrage! Du wirst in Kürze von uns hören");
+  const clickSubmit = (event) => {
+    event.preventDefault(); // prevent the form from submitting
+    const emailInput = document.getElementById('emailInput');
+    const messageInput = document.getElementById('messageInput');
+
+    if (emailInput.value && messageInput.value) {
+      alert('Vielen Dank für deine Anfrage! Du wirst in Kürze von uns hören.');
+      emailInput.value = "";
+      messageInput.value = "";
+    } else {
+      alert('Bitte fülle alle erforderlichen Felder aus.');
+    }
   }
 
   return (
@@ -42,7 +51,7 @@ function Contact() {
               </Form.Group>
               <Form.Group className="mx-2 mb-3" controlId="formBasicEmail">
                 <b><Form.Label>Email Adresse</Form.Label></b>
-                <Form.Control type="email" placeholder="Gib bitte deine E-Mail Adresse an." />
+                <Form.Control id="emailInput" type="email" placeholder="Gib bitte deine E-Mail Adresse an." />
                 <Form.Text className="text-muted">
                   Keine Sorge. Wir geben deine E-Mail an niemanden weiter!
                 </Form.Text>
@@ -50,10 +59,10 @@ function Contact() {
 
               <Form.Group className="mx-2 mb-3" controlId="exampleForm.ControlTextarea1">
                 <b><Form.Label>Deine Nachricht</Form.Label></b>
-                <Form.Control as="textarea" rows={3} />
+                <Form.Control id="messageInput" as="textarea" rows={3} />
               </Form.Group>
-              <div id="submitButton">
-                <Submit onClick={clickSubmit}>Abschicken</Submit>
+              <div id="submitFormDiv">
+                <button id="submitButton" onClick={clickSubmit}>Abschicken</button>
               </div>
             </div>
           </Form>
@@ -66,17 +75,5 @@ function Contact() {
     </>
   )
 }
-
-const Submit = styled.button`
-  background-color: rgb(79, 166, 71);
-  float: center;
-  color: white;
-  font-size: 12px;
-  padding: 5px 20px;
-  border-radius: 5px;
-  margin: 10px 5px;
-  outline: 0;
-  box-shadow: 2px 2px 0px lightgray;
-  cursor: url(Pointer_32_x_32.png) 10 0, pointer`
 
 export default Contact;

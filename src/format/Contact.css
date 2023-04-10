@@ -15,6 +15,18 @@
 }
 
 #submitButton {
+  background-color: rgb(79, 166, 71);
+  float: center;
+  color: white;
+  font-size: 12px;
+  padding: 5px 20px;
+  border-radius: 5px;
+  margin: 10px 5px;
+  outline: 0;
+  box-shadow: 2px 2px 0px lightgray;
+}
+
+#submitFormDiv {
   text-align: center;
 }
 
