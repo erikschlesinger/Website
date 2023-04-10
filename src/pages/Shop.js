@@ -60,10 +60,8 @@ function OrderForm() {
   const handleSubmit = event => {
     event.preventDefault();
 
-    if (address && zipCode && city && country && nameOnCreditCard && IBAN) { // Checking if all the form fields are filled
-      if (quantity > storage) { // Check if there is enough storage
-        alert('Nicht genügend Flaschen auf Lager');
-      } else {
+    if (quantity <= storage) { // Check if there is enough storage
+      if (address && zipCode && city && country && nameOnCreditCard && IBAN) { // Checking if all the form fields are filled
         // Show confirmation prompt
         const isConfirmed = window.confirm('Möchten Sie diese Bestellung wirklich absenden?');
         if (isConfirmed) {
@@ -73,9 +71,12 @@ function OrderForm() {
           alert(`Bestellung erfolgreich!\nAnzahl: ${quantity} Flaschen\nKaufpreis: ${price} €`);
           setSubmitted(true); // set submitted flag to true
         }
+      } else {
+        alert('Bitte alle Felder ausfüllen');
       }
-    } else {
-      alert('Bitte alle Felder ausfüllen');
+    }
+    else {
+      alert('Nicht genügend Flaschen auf Lager');
     }
   };
 
