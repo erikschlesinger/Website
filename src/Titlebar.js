@@ -19,8 +19,8 @@ function Titlebar(props) {
           <a href="javascript:void(0);" onClick={() => handleNavigate("/Contact")}>Kontakt</a>
           <a href="javascript:void(0);" onClick={() => handleNavigate("/About")}>Über uns</a>
           <a href="javascript:void(0);" onClick={() => handleNavigate("/Shop")}>Kaufe jetzt deine Flasche!</a>
-          <a href="javascript:void(0);" onClick={() => handleNavigate("/")}><img src={Logout} className="Logout" alt="logo-abbildung" /></a>
-          <a>Angemeldet als {props.user}</a>
+          <logout href="javascript:void(0);" onClick={() => handleNavigate("/")}><img src={Logout} className="Logout" alt="logo-abbildung" /></logout>
+          <anmeldung>Angemeldet als {props.user}</anmeldung>
         </div>
         <a href="javascript:void(0);" onClick={() => handleNavigate("/App")}><img src={Banner} className="App-banner" alt="logo der Flasche" /></a>
       </div>
