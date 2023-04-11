@@ -47,7 +47,6 @@ function Contact() {
                   Keine Sorge. Wir geben deine E-Mail an niemanden weiter!
                 </Form.Text>
               </Form.Group>
-
               <Form.Group className="mx-2 mb-3" controlId="exampleForm.ControlTextarea1">
                 <b><Form.Label>Deine Nachricht</Form.Label></b>
                 <Form.Control as="textarea" rows={3} />
@@ -58,7 +57,7 @@ function Contact() {
             </div>
           </Form>
           </Col>
-          <Col></Col>
+          <Col xs={3}></Col>
         </Row>
       </Container>
       <p><br /></p>

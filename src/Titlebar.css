@@ -6,7 +6,7 @@
   outline: rgb(79, 166, 71);
   outline-width: medium;
   outline-style: ridge;
-  cursor: url(./cursor_32_x_32_Neu.png) 10 0, none;
+  cursor: url(cursor_32_x_32_Neu.png) 10 0, none;
 }
 
 /*Hier werden alle Attribute von topnav an das HTML Attribut <a> vererbt*/
@@ -35,7 +35,7 @@
 .topnav logout {
   float: right;
   color: #ffffff;
-  padding: 14px 16px;
+  padding: 15px 15px;
   cursor: url(Pointer_32_x_32.png) 10 0, pointer;
 }
 
@@ -78,5 +78,5 @@
   padding: 16px 16px;
   text-decoration: none;
   font-size: 17px;
-  cursor: url(Pointer_32_x_32.png) 10 0, pointer;
+  cursor: url(cursor_32_x_32_Neu.png) 10 0, none;
 }

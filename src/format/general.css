@@ -48,3 +48,16 @@ p {
   padding: 10px 20px 20px 10px;
   cursor: url(../images/general/cursor_32_x_32_Neu.png) 10 0, none;
 }
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.container img {
+  width: 520px;
+  height: 350px;
+  max-width: 100%;
+  max-height: 100%;
+  align-items: right;
+}

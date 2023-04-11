@@ -86,8 +86,8 @@ function OrderForm() {
       <Container fluid>
         <Row>
           <Col xs={8} className='colDescriptions'>
-            <img src={Logo} alt="image description" className='logo' />
-            <img src={Skizze_v1} alt="image description" className='skizze' />
+            <img src={Logo} alt="Logo der Flasche" className='logo' />
+            <img src={Skizze_v1} alt="Alternatives Logo der Flasche" className='skizze' />
           </Col>
           <Col className='colForm'>
             <form className="order-form" onSubmit={handleSubmit}>
