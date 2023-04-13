@@ -46,3 +46,14 @@ p {
   padding: 10px 20px 20px 10px;
   cursor: url(../images/general/cursor_32_x_32_Neu.png) 10 0, none;
 }
+
+.aboutUsImages {
+  display: flex;
+  align-items: center;
+}
+
+.aboutUsImages img {
+  width: 420px;
+  height: 300px;
+  margin-left: 5%;
+}

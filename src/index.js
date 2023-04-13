@@ -13,15 +13,15 @@ import {createBrowserRouter, RouterProvider} from "react-router-dom";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Login />
+    element: <App />
   },
   {
     path: "/Contact",
     element: <Contact />
   },
   {
-    path: "/App",
-    element: <App />
+    path: "/Login",
+    element: <Login />
   },
   {
     path: "/Impressum",

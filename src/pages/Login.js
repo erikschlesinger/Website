@@ -13,7 +13,7 @@ function LoginButton() {
   const handleLogin = (e) => {
     e.preventDefault();
     if (username.toLowerCase() === "admin@flaschen-ag.de" && password === "admin") {
-      navigate("/App", { state: { user: "admin" } });
+      navigate("/", { state: { user: "admin" } });
     } else {
       setShowPopup(true); //Popup Fenster einblenden
       setShowLogin(false); //Login Fenster ausblenden
@@ -51,7 +51,7 @@ function LoginButton() {
               </button>
             </div>
             <p className="forgot-password text-right mt-2">
-              Als <Link to="/App" state={{ user: "Gast" }}><a href="javascript:void(0);">Gast anmelden</a></Link>
+              Als <Link to="/" state={{ user: "Gast" }}><a href="javascript:void(0);">Gast anmelden</a></Link>
             </p>
           </div>
         </form>)}

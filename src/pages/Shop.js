@@ -1,7 +1,6 @@
 import { React, useState, useEffect } from 'react';
 import '../format/OrderForm.css';
-import Logo from '../images/general/CompanyLogo.png';
-import Skizze_v1 from '../images/AboutUS/Flasche_erste_Skizze.png'
+import banner from '../images/shop/shop_banner.png';
 import TitlebarComponent from '../Titlebar.js';
 import FusszeileComponent from '../Fusszeile.js';
 import { Container, Row, Col } from 'react-bootstrap';
@@ -20,7 +19,7 @@ function OrderForm() {
   const [nameOnCreditCard, setNameOnCreditCard] = useState('');
   const [IBAN, setIBAN] = useState('');
   const [quantity, setQuantity] = useState(1);
-  const [price, setPrice] = useState(40);
+  const [price, setPrice] = useState(39.99);
   const [storage, setStorage] = useState(sessionStorage.getItem('storage'));
   const [submitted, setSubmitted] = useState(false);
 
@@ -28,11 +27,6 @@ function OrderForm() {
   if (!sessionStorage.getItem('storage')) {
     sessionStorage.setItem('storage', 10);
   }
-
-  // useEffect hook to update the price state variable when the quantity state changes
-  useEffect(() => {
-    setPrice(40 * quantity);
-  }, [quantity]);
 
   // useEffect hook to update the storage and quantity state variables when the form is submitted and storage state changes
   useEffect(() => {
@@ -62,6 +56,11 @@ function OrderForm() {
       setQuantity(prevQuantity => prevQuantity - 1);
     }
   };
+
+  // useEffect hook to update the price state variable when the quantity state changes
+  useEffect(() => {
+    setPrice(Math.round(39.99 * quantity * 100) / 100);
+  }, [quantity]);
 
   // function to handle form submission
   const handleSubmit = event => {
@@ -93,9 +92,8 @@ function OrderForm() {
       <TitlebarComponent user={user}></TitlebarComponent>
       <Container fluid>
         <Row>
-          <Col xs={8} className='colDescriptions'>
-            <img src={Logo} alt="image description" className='logo' />
-            <img src={Skizze_v1} alt="image description" className='skizze' />
+          <Col xs={7} className='colDescriptions'>
+            <img src={banner} alt="image description" className='banner' />
           </Col>
           <Col className='colForm'>
             <form className="order-form" onSubmit={handleSubmit}>

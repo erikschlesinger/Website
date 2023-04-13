@@ -39,17 +39,17 @@ function About() {
           Dabei kamen wir schnell auf die Idee eine einfache Trinkflasche vollkommen neu zu überdenken. Dabei machten wir uns als ersten darüber gedanken welche zusätzlichen Gegenstände
           wir benötigen um Getränke herzustellen.
         </p>
-        <div>
+        <div className="aboutUsImages">
           <ul>
-            <img src={Skizze_v1} className="pic-mid-full" alt="erste Skitze der Flasche" />
             <li>Einen Kühlschrank, um die Getränke abzukühlen</li>
             <li>Einen Wasserkocher, um Getränke (z.B. Tee) zu erhitzen</li>
             <li>Einen Standmixer, um Smothies oder Protheinshakes herzustellen</li>
             <li>Einen Wasserfilter, um Kalkrückstände zu beseitigen</li>
           </ul><br/>
+          <img src={Skizze_v1} className="pic-mid-full" alt="erste Skitze der Flasche" />
+          </div>
           <p>Außerdem sollte die Flasche kommplett Nachhaltig, Vegan und Klimaneutral in Europa produziert werden</p>
-          <p>Abschließend musste die Idee nur noch umgesetzt werden:</p>
-        </div>
+          <p>Abschließend musste die Idee nur noch umgesetzt werden.</p>
         <br />
         <br />
       </div>

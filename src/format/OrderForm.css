@@ -56,16 +56,9 @@ input[type="number"]:focus {
   margin-left: 5%;
 }
 
-.logo {
-  width: 90%;
+.banner {
+  width: 70%;
   height: auto;
-}
-
-.skizze {
-  width: 60%;
-  height: auto;
-  margin-top: 5%;
-  margin-left: 15%;
 }
 
 /* Hide field spinners in Firefox*/
