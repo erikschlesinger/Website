@@ -40,6 +40,6 @@ const Button = styled.button`
   margin: 10px 5px;
   outline: 0;
   box-shadow: 2px 2px 0px lightgray;
-  cursor: url(Pointer_32_x_32.png) 10 0, pointer;
+  cursor: url(../images/general/Pointer_32_x_32.png) 10 0, pointer;
 `
 export default App;

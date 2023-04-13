@@ -8,10 +8,17 @@
   border: 1px solid #ddd;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: url(../images/general/cursor_32_x_32_Neu.png) 10 0, none;
+}
+
+.shop-img {
+  size: 70%;
+  cursor: url(../images/general/cursor_32_x_32_Neu.png) 10 0, none;
 }
 
 .form-group {
   margin-bottom: 16px;
+  cursor: url(../images/general/cursor_32_x_32_Neu.png) 10 0, none;
 }
 
 label {
@@ -48,24 +55,12 @@ input[type="number"]:focus {
   font-size: 16px;
   border: none;
   background-color: #0066cc;
-  color: #fff
+  color: #fff;
 }
 
 .colDescriptions {
   margin-top: 2%;
   margin-left: 5%;
-}
-
-.logo {
-  width: 90%;
-  height: auto;
-}
-
-.skizze {
-  width: 60%;
-  height: auto;
-  margin-top: 5%;
-  margin-left: 15%;
 }
 
 /* Hide field spinners in Firefox*/
@@ -78,4 +73,8 @@ input[type="number"] {
 #price {
   width: 100px;
   position: relative;
+}
+
+.text {
+  cursor: url(../images/general/cursor_32_x_32_Neu.png) 10 0, none;
 }

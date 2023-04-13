@@ -9,7 +9,7 @@
   outline-width: medium;
   outline-style: ridge;
   outline-offset: 0;
-  cursor: url(../images/general/Pointer_32_x_32.png) 10 0, pointer;
+  cursor: url(../images/general/cursor_32_x_32_Neu.png) 10 0, none;
 }
 
 .App-banner {
@@ -17,7 +17,7 @@
   width: 100%;
   display: flex;
   padding: 0px 0px 25px 0px;
-  cursor: url(../images/general/Pointer_32_x_32.png) 10 0, pointer;
+  cursor: url(../images/general/cursor_32_x_32_Neu.png) 10 0, none;
 }
 
 .App-logo_fl {
