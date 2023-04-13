@@ -9,6 +9,7 @@ import { useLocation } from "react-router-dom";
 
 
 function OrderForm() {
+  // transfer user state 
   const location = useLocation();
   const user = location.state?.user;
   // Setting up state variables
@@ -20,8 +21,13 @@ function OrderForm() {
   const [IBAN, setIBAN] = useState('');
   const [quantity, setQuantity] = useState(1);
   const [price, setPrice] = useState(40);
-  const [storage, setStorage] = useState(10);
+  const [storage, setStorage] = useState(sessionStorage.getItem('storage'));
   const [submitted, setSubmitted] = useState(false);
+
+  // set sessionStorage to 10, if not yet initialized
+  if (!sessionStorage.getItem('storage')) {
+    sessionStorage.setItem('storage', 10);
+  }
 
   // useEffect hook to update the price state variable when the quantity state changes
   useEffect(() => {
@@ -30,10 +36,11 @@ function OrderForm() {
 
   // useEffect hook to update the storage and quantity state variables when the form is submitted and storage state changes
   useEffect(() => {
-    localStorage.setItem('storage', storage); // Set new Storage
+    sessionStorage.setItem('storage', storage); // update the sessionStorage when storage changes
+
     // update the quantity state depending on the new storage value
     if (submitted) {
-      if (storage !== 0) {
+      if (storage !== 0 && quantity > storage) {
         setQuantity(storage);
       } else {
         setQuantity(1);
