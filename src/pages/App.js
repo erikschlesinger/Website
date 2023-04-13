@@ -7,7 +7,10 @@ import { Link, useLocation } from "react-router-dom";
 
 function App() {
   const location = useLocation();
-  const user = location.state?.user;
+  var user = location.state?.user;
+  if (user == null) {
+    user = "Gast";
+  }
 
   return (
     <>

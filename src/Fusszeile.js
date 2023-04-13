@@ -12,7 +12,7 @@ function Fusszeile(props) {
   return (
     <div className="navbar">
 
-      <a href="javascript:void(0);" onClick={() => handleNavigate("/App")}>Home</a>
+      <a href="javascript:void(0);" onClick={() => handleNavigate("/")}>Home</a>
       <a href="javascript:void(0);" onClick={() => handleNavigate("/Contact")}>Kontakt</a>
       <a href="javascript:void(0);" onClick={() => handleNavigate("/Impressum")}>Impressum</a>
       <a href="javascript:void(0);" onClick={() => handleNavigate("/AGBs")}>AGBs</a>
