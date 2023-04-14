@@ -40,7 +40,7 @@ function Impressum() {
         <br />
         Umsatzsteuer-ID-Nr.:<dfn> DE 119631149</dfn>
       </div>
-      <br /><br /><br /><br />
+      <br /><br /><br /><br /><br />
       <FusszeileComponent user={user}></FusszeileComponent>
     </>
   );

@@ -69,8 +69,9 @@ function Contact() {
           </Col>
           <Col></Col>
         </Row>
+        <br /><br />
       </Container>
-      <p><br /></p>
+      
       <FusszeileComponent user={user}></FusszeileComponent>
     </>
   )
