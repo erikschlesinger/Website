@@ -5,6 +5,7 @@ import '../format/general.css'
 import { useLocation } from "react-router-dom";
 
 function AGBs() {
+  //get user state
   const location = useLocation();
   const user = location.state?.user;
 

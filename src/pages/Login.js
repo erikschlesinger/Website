@@ -7,22 +7,23 @@ function LoginButton() {
   const navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [showPopup, setShowPopup] = useState(false); //State um Fehlermeldung ein/auszublenden
-  const [showLogin, setShowLogin] = useState(true); //State um Login Fenster ein/auszublenden
+  const [showPopup, setShowPopup] = useState(false); //State to toggle Error Window
+  const [showLogin, setShowLogin] = useState(true); //State to toggle Login Window
 
   const handleLogin = (e) => {
     e.preventDefault();
-    if (username.toLowerCase() === "admin@flaschen-ag.de" && password === "admin") {
-      navigate("/", { state: { user: "admin" } });
+    if (username.toLowerCase() === "admin@flaschen-ag.de" && password === "admin") { //Admin Account credentials
+      navigate("/", { state: { user: "admin" } }); //successfull logn -> routing with user state
     } else {
-      setShowPopup(true); //Popup Fenster einblenden
-      setShowLogin(false); //Login Fenster ausblenden
+      //If credentials wrong
+      setShowPopup(true); //show Error Window
+      setShowLogin(false); //hide Login Window
     }
   }
 
   return (
     <div className="Auth-form-container">
-      {showLogin && ( // showLogin-State auf das Login Fenster mappen
+      {showLogin && ( // map showLogin-State to the Window
         <form className="Auth-form" onSubmit={handleLogin}>
           <div className="Auth-form-content">
             <h3 className="Auth-form-title">Anmelden</h3>
@@ -55,7 +56,7 @@ function LoginButton() {
             </p>
           </div>
         </form>)}
-      {showPopup && ( // showPopup-State auf das Fehlermeldungs-Fenster mappen
+      {showPopup && ( // map showPopup-State to Error Window
         <div className="popup-content">
           <h3>Login Fehlgeschlagen</h3>
           <p>Bitte überprüfen Sie Ihren Benutzernamen und Ihr Passwort und versuchen es erneut.</p>
@@ -63,7 +64,7 @@ function LoginButton() {
             type="button"
             className="btn btn-primary"
             style={{ marginTop: "3%" }}
-            // Login Fenster anzeigen / Fehlermeldung ausblenden
+            // Show Login Window / Hide Error Window
             onClick={() => setShowPopup(false) & setShowLogin(true)}>
             Zurück
           </button>

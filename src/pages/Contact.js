@@ -8,16 +8,19 @@ import { Container, Row, Col, Form } from 'react-bootstrap';
 import { useLocation } from "react-router-dom";
 
 function Contact() {
+  //get user state
   const location = useLocation();
   const user = location.state?.user;
 
+  //submit function for the form
   const clickSubmit = (event) => {
     event.preventDefault(); // prevent the form from submitting
     const emailInput = document.getElementById('emailInput');
     const messageInput = document.getElementById('messageInput');
 
-    if (emailInput.value && messageInput.value) {
+    if (emailInput.value && messageInput.value) { //check if fields are filled with content
       alert('Vielen Dank für deine Anfrage! Du wirst in Kürze von uns hören.');
+      //clear fields when submitted successfully
       emailInput.value = "";
       messageInput.value = "";
     } else {
@@ -71,7 +74,7 @@ function Contact() {
         </Row>
         <br /><br />
       </Container>
-      
+
       <FusszeileComponent user={user}></FusszeileComponent>
     </>
   )

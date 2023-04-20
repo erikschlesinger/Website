@@ -6,6 +6,7 @@ import Skizze_v1 from '../images/AboutUS/Flasche_erste_Skizze.png'
 import { useLocation } from "react-router-dom";
 
 function About() {
+  //get user state 
   const location = useLocation();
   const user = location.state?.user;
 

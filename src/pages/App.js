@@ -6,8 +6,10 @@ import Logo from '../images/general/CompanyLogo.png';
 import { Link, useLocation } from "react-router-dom";
 
 function App() {
+  //get user state when routing
   const location = useLocation();
   var user = location.state?.user;
+  //set user state to null as default, if not logged in
   if (user == null) {
     user = "Gast";
   }
